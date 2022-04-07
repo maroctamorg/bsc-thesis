@@ -15,11 +15,11 @@
 
 \usepackage{biblatex}
 % \usepackage[style=alphabetic]{biblatex}
-\addbibresource{references.bib}
+\addbibresource{res/references.bib}
 
 \usepackage{lipsum}
 
-\graphicspath{{\images}}
+\graphicspath{{res/images/}}
 
 % Available document structure commands:
 
@@ -31,9 +31,9 @@
 
 \begin{document}
 
-\input{title}
+\input{src/title}
 
-\input{abstract}
+\input{src/abstract}
 
 \chapter*{Acknowledgements}
 I want to thank...
@@ -43,23 +43,23 @@ I want to thank...
 \listoftables
 
 \chapter{Introduction}
-\input{chapters/introduction}
+\input{src/chapters/introduction}
 
 \chapter{Mathematical Background}
-\input{chapters/mathematical-background}
+\input{src/chapters/mathematical-background}
 
 \chapter{Geometric Algebra}
-\input{chapters/geometric-algebra}
+\input{src/chapters/geometric-algebra}
 
 \chapter{Geometric Calculus}
-\input{chapters/geometric-calculus}
+\input{src/chapters/geometric-calculus}
 
 \chapter{Conclusion}
-\input{chapters/conclusion}
+\input{src/chapters/conclusion}
 
 \appendix
 \chapter{Topological Manifolds as Curve Bundles}
-\input{appendix/curve-bundles}
+\input{src/appendix/curve-bundles}
 
 \printbibliography
 
