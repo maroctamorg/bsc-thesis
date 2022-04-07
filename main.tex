@@ -1,0 +1,66 @@
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{graphicx}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\newcommand{\thtitle}{Smooth Curve Geometry}
+\newcommand{\thsubtitle}{On The Geometric Tangent Structure of a Smooth Manifold and Its Calculus}
+\newcommand{\thauthor}{Marcelo Guimarães Neto}
+
+\fancyhead[R]{\rightmark}
+\fancyhead[L]{}
+
+\usepackage{biblatex}
+% \usepackage[style=alphabetic]{biblatex}
+\addbibresource{references.bib}
+
+\usepackage{lipsum}
+
+\graphicspath{{\images}}
+
+% Available document structure commands:
+
+% Book: \part{}, \chapter{}, \section{}, \subsection{}, \subsubsection{}, \paragraph{}, \subparagraph{}.
+
+% Report: \part{}, \chapter{}, \section{}, \subsection{}, \subsubsection{}, \paragraph{}, \subparagraph{}.
+
+% Article: \part{}, \section{}, \subsection{}, \subsubsection{}, \paragraph{}, \subparagraph{}.
+
+\begin{document}
+
+\input{title}
+
+\input{abstract}
+
+\chapter*{Acknowledgements}
+I want to thank...
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\chapter{Introduction}
+\input{chapters/introduction}
+
+\chapter{Mathematical Background}
+\input{chapters/mathematical-background}
+
+\chapter{Geometric Algebra}
+\input{chapters/geometric-algebra}
+
+\chapter{Geometric Calculus}
+\input{chapters/geometric-calculus}
+
+\chapter{Conclusion}
+\input{chapters/conclusion}
+
+\appendix
+\chapter{Topological Manifolds as Curve Bundles}
+\input{appendix/curve-bundles}
+
+\printbibliography
+
+\end{document}
