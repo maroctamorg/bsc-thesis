@@ -8,7 +8,9 @@ Thesis to be presented to the University of Helsinki for the degree of Bachelor 
 
 BUILD
 -----
-With `latexmk` installed (e.g. via TeXLive) simply run `make` in the project root. To view the pdf from the command line, one can run
+With `latexmk` installed (e.g. via TeXLive) simply run `make compile` in the project root.
+To compile and view the open the pdf from the command line, one can run
 ```sh
-PDFVIEWER={PDFVIEWER} make present
+PDFVIEWER={PDFVIEWER} make
 ```
+Often it is possible to pass `open` to the PDFVIEWER as it calls the DE-specific pdfviewer.

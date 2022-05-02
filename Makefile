@@ -7,7 +7,7 @@ all: compile present
 
 compile:
 	${CC} ${CARGS} ${CTARGET} ${CSOURCE}
-	mv build/thesis.pdf thesis.pdf 
+	mv build/thesis.pdf ./ 
 
 present:
 	${PDFVIEWER} thesis.pdf

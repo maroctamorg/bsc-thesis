@@ -1,0 +1,8 @@
+ - Generalized Stoke's Theorem
+	TOPICS	: Geometric Calculus, Measure and Integration
+	TAGS	: STRAIGHTFORWARD
+ - Geometric Curve Theory
+	TOPICS	: Geometric Algebra, Differential Geometry, Hilbert Spaces, Bundles, Quotient Topology
+	TAGS	: ORIGINAL
+ - Petrov classification of curvature tensors
+ - Cayley-Hamilton Theorem
