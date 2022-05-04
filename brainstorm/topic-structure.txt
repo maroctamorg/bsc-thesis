@@ -1,0 +1,14 @@
+TOPIC		: Divisibility of the Even Subalgebras of Euclidean Geometric Spaces and A Geometric Proof of the Frobenius Theorem
+STRUCTURE	:
+	ABSTRACT
+	INTRODUCTION
+	BACKGROUND
+		Groups, Rings and Fields: definitions, homomorphisms, equivalence relations, quotients? and ideals?, divisibility
+		Vector Spaces and Algebras: definitions, uniqueness of finite-dimensional vector spaces, free algebras and bases, structure constants?, tensor algebra?
+	GEOMETRIC ALGEBRA
+		overview of the Universal Geometric Algebra and its relationship to Clifford Algebras: axioms, elements, products, UGA as a template, Clifford Algebras, formal? and practical construction
+		Clifford/Geometric Algebras of Euclidean Space and their even subalgebras (G+(E1), G+(E2), G+(E3), G+(E4))
+	DIVISIBILITY OF EVEN SUBALGEBRAS AND PROOF OF FROBENIUS
+		even subalgebras: proof of non-divisibility of G+(En) for n>3 (construction of zero-divisor: simple but original)
+		unital associative finite-dimension division algebras over the reals (proof of isomorphism to G+(En): either standard in the language of GA or original (if I can come up with one))
+	CONCLUSION

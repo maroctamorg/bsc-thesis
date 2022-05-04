@@ -1,8 +1,25 @@
+ - Overview of Geometric Algebra [and Calculus]
+	TOPICS		: Geometric Algebra, Geometric Calculus
+	CATEGORY	: Presentation of a concept
+	PROS		: simpler, quicker, more rigorous, more space for me to discuss the philosophy and advantages of the theory, analyse original or ambiguous definitions thoroughly (justify different choice/presentation of axioms, discuss alternative definitions for vector manifolds)
+	CONS		: less focused
+	SUBTOPICS	: geometric algebra from axioms vs. as quotient structure on the tensor algebra, universal property of geometric algebra, classification and properties of elements and products, [geometric derivative, properties of the geometric derivative, gradient-divergence-curl, exterior derivative, directed integration]
+	REFINEMENTS	: - proof of the universal property of geometric algebras (starting from axioms)
+				  - construction of a geometric algebra of smooth curves or a geometric tangent structure (from the local embedding into a geometric euclidean algebra induce a geometric product on the tangent vectors): prove that connections and tensors are elements of the geometric tangent structure
+
  - Generalized Stoke's Theorem
-	TOPICS	: Geometric Calculus, Measure and Integration
-	TAGS	: STRAIGHTFORWARD
+	TOPICS		: Geometric Algebra, Geometric Calculus, Vector Manifolds, Directed Integration
+	PROS		: solid, straightforward
+	CONS		: vector manifolds are somewhat underdeveloped as a concept: the original formulation seems to require an embedding of a smooth manifold into a Geometric Algebra (points are geometric vectors) so it may be needed to invoke the Whitney embedding theorem to justify generalizability; alternatively, I would need to do some further research and be very careful in reformulating the theory in terms of local embeddings (charts map neighborhoods of M into the geometric algebra of E_n)
+	REFERENCE	: Chapter 7.3 of Hestenes&Sobczyc
+	MATERIAL	: Hestenes&Sobczyc (Ch. 1-2-4-5-6-7)
+	CATEGORY	: Proof of a theorem
+	ALTERNATIVES: do away with manifolds and prove Stoke's Theorem 
+
  - Geometric Curve Theory
 	TOPICS	: Geometric Algebra, Differential Geometry, Hilbert Spaces, Bundles, Quotient Topology
 	TAGS	: ORIGINAL
- - Petrov classification of curvature tensors
+
  - Cayley-Hamilton Theorem
+	TOPICS	: Multilinear Algebra (Frames, Matrices, Determinants, Multivectors)
+
