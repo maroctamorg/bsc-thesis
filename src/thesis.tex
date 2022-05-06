@@ -1,13 +1,17 @@
 \documentclass[12pt]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
 \usepackage{graphicx}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
-\newcommand{\thtitle}{Smooth Curve Geometry}
-\newcommand{\thsubtitle}{On The Geometric Tangent Structure of a Smooth Manifold and Its Calculus}
+\newcommand{\thtitle}{The Even Subalgebras of Euclidean Geometric Spaces}
+\newcommand{\thsubtitle}{A Geometric Proof of the Frobenius Classification of Finite-Dimensional Associative Division Algebras over the Reals
+}
 \newcommand{\thauthor}{Marcelo Guimarães Neto}
 
 \fancyhead[R]{\rightmark}
@@ -28,6 +32,37 @@
 % Report: \part{}, \chapter{}, \section{}, \subsection{}, \subsubsection{}, \paragraph{}, \subparagraph{}.
 
 % Article: \part{}, \section{}, \subsection{}, \subsubsection{}, \paragraph{}, \subparagraph{}.
+
+% CUSTOM COMMAND DEFINITIONS
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\HM}{\mathbb{H}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\V}{\mathcal{V}}
+
+\newcommand{\bv}[1]{\boldsymbol{#1}}
+\newcommand{\gs}[1]{\langle #1 \rangle}
+\newcommand{\g}[2]{\langle #1 \rangle_{#2}}
+
+% THEOREM ENVIRONMENT DEFINITIONS
+\newtheorem{theorem}{Theorem}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}[definition]{Example}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -51,15 +86,11 @@ I want to thank...
 \chapter{Geometric Algebra}
 \input{src/chapters/geometric-algebra}
 
-\chapter{Geometric Calculus}
-\input{src/chapters/geometric-calculus}
+\chapter{Divisibility of the Even Subalgebras and proof of Frobenius}
+\input{src/chapters/even-divisibility}
 
 \chapter{Conclusion}
 \input{src/chapters/conclusion}
-
-\appendix
-\chapter{Topological Manifolds as Curve Bundles}
-\input{src/appendix/curve-bundles}
 
 \printbibliography
 
