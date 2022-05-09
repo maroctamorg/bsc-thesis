@@ -6,6 +6,13 @@
 \usepackage{amsthm}
 \usepackage{graphicx}
 
+\setlength{\parskip}{1em}
+% \setlength{\parindent}{0pt}
+
+% \usepackage{setspace}
+% document-wide settings:
+%    \onehalfspacing
+
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
@@ -17,11 +24,12 @@
 \fancyhead[R]{\rightmark}
 \fancyhead[L]{}
 
-\usepackage{biblatex}
-% \usepackage[style=alphabetic]{biblatex}
+% \usepackage{biblatex}
+\usepackage[style=alphabetic]{biblatex}
 \addbibresource{res/references.bib}
 
 \usepackage{lipsum}
+\usepackage[dvipsnames]{xcolor}
 
 \graphicspath{{res/images}}
 
@@ -86,7 +94,7 @@ I want to thank...
 \chapter{Geometric Algebra}
 \input{src/chapters/geometric-algebra}
 
-\chapter{Divisibility of the Even Subalgebras and proof of Frobenius}
+\chapter{Classification of the Scalar Algebras}
 \input{src/chapters/even-divisibility}
 
 \chapter{Conclusion}
