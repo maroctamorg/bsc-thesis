@@ -12,18 +12,58 @@ A \textbf{UGA} is then a template for Geometric Algebras: given a finite-dimensi
 
 A note on nomenclature is urgently in order: what we call \textbf{Universal Geometric Algebra} is in fact not an algebra; we will continue to refer to it as such, and in fact we will discuss the generally applicable definitions and results in the context of an abstract algebra whose formal product obeys the axioms, and whose abstract linear space will always be assumed to be of a sufficiently high-dimension such that it does not get in the way of the argument.
 
-\subsection{The Axioms}
+\subsection{Axioms, Elements and Products}
 
 A Geometric Algebra $\G$  is a finite-dimensional unitary associative algebra over the reals obeying the following axioms:
 \input{src/definitions/ga-axioms}
+We refer to the formal product of such an algebra, as a \textbf{geometric product}.
 
-\subsection{The Elements}
+The axioms give rise to a large variety of different objects: it is thus useful to familiarise ourselves with some specific terminology before we continue with our discussion.
+\input{src/definitions/ga-elements}
 
-\subsection{The Products}
+We first prove the following lemma.
+\input{src/lemmas/inner-product}
+\input{src/proofs/inner-product}
+
+From the above, we obtain the principal property of the geometric product.
+\input{src/theorems/geometric-product}
+\input{src/proofs/geometric-product}
+
+As a corollary, we obtain the following self-evident propositions.
+\input{src/corollaries/l-independence}
+\input{src/corollaries/orthogonality}
+
+We will now go on to consider general expressions and properties of products between arbitrary multivectors; but first, a brief note on conventions: here on out, whenever left unspecified, the precedence of product is inner$\to$wedge$\to$geometric.
+
+\textcolor{red}{PROVE GENERAL FORMULA IN ORDER TO PROVE THAT EVEN MULTIVECTORS FORM A SUBALGEBRA}
+
+The geometric product between homogeneous multivectors has the following important property.
+\input{src/theorems/homogeneous-product}
+%\input{src/proofs/homogeneous-product}
+
+\input{src/corollaries/even-subalgebra}
+
+
+We are now equipped to provide the general definitions for the inner and outer products in the case of arbitrary multivectors.
+\input{src/definitions/g-inner-product}
+
+\textcolor{red}{THE INNER PRODUCT IS A GRADE LOWERING OPERATION, REPRESENTING WHAT? represents the orthogonal complement of the smaller space in the larger space (left-right)}
+
+\input{src/definitions/g-outer-product}
+
+\textcolor{red}{THE EXTERIOR PRODUCT IS A GRADE LOWERING OPERATION, REPRESENTING WHAT? represents the orthogonal complement of the smaller space in the larger space (left-right)}
+
+\newpage
 
 \section{Clifford Algebras}
 
+\textcolor{red}{DISCUSS THE VALIDITY OF THE AXIOMS AND PROVE THAT GEOMETRIC ALGEBRAS ARE SIMPLY CLIFFORD ALGEBRAS (DECIDE IF I SHOULD RELAX POSITIVE-DEFINITENESS REQUIREMENT AND DRAW DISTINCTION THERE OR IF I DRAW DISTINCTION AT KEEPING THE INNER PRODUCT FORMAL OR BOTH); PROVE UNIVERSAL PROPERTY}
+
+\newpage
+
 \section{The Euclidean Geometric Algebras: $\G(\E_1), \G(\E_2), \G(\E_3)$ }
+
+\textcolor{red}{DISCUSS APPROACH: CONSTRUCT BASIS OF THE ALGEBRA FROM MULTIPLICATION TABLE OF VECTOR SPACE BASIS, DISCUSS THE EVEN SUBALGEBRAS?}
 
 \subsection{$\G(\E_1)$}
 
