@@ -18,6 +18,9 @@ A Geometric Algebra $\G$  is a finite-dimensional unitary associative algebra ov
 \input{src/definitions/ga-axioms}
 We refer to the formal product of such an algebra, as a \textbf{geometric product}.
 
+An immediate result of axioms \ref{a:ga-axiom3} and \ref{a:ga-axiom4} is:
+\input{src/lemmas/invertibility}
+
 We first prove the following lemma.
 \input{src/lemmas/inner-product}
 \input{src/proofs/inner-product}
@@ -34,22 +37,27 @@ We will now go on to consider general expressions and properties of products bet
 \input{src/definitions/ga-elements}
 A brief note on conventions: here on out, whenever left unspecified, the precedence of products is inner$\to$wedge$\to$geometric.
 
-\textcolor{red}{PROVE GENERAL FORMULA IN ORDER TO PROVE THAT EVEN MULTIVECTORS FORM A SUBALGEBRA}
+First off, we generalize the definition of the inner and outer products to homogeneous multivectors.
+\input{src/definitions/g-inner-product1}
+\input{src/definitions/g-outer-product1}
 
-The geometric product between homogeneous multivectors has the following important property.
+We now prove the following steppingstone lemma regarding the product of a vector with a homogenous multivector.
+\input{src/lemmas/v-mv-product}
+\input{src/proofs/v-mv-product}
+
+Using the above lemma, we can prove the following important property of the geometric product between homogeneous multivectors.
 \input{src/theorems/homogeneous-product}
 %\input{src/proofs/homogeneous-product}
+\textcolor{red}{ATTRIBUTE APPROACH OF THE PROOF TO HESTENES}
 
+As a corollary, we obtain our sought-after result.
 \input{src/corollaries/even-subalgebra}
 
 
-We are now equipped to provide the general definitions for the inner and outer products in the case of arbitrary multivectors.
-\input{src/definitions/g-inner-product}
-
+Moreover, we are now equipped to provide general, explicit definitions for the inner and outer products in the case of arbitrary multivectors.
+\input{src/definitions/g-inner-product2}
 \textcolor{red}{THE INNER PRODUCT IS A GRADE LOWERING OPERATION, REPRESENTING WHAT? represents the orthogonal complement of the smaller space in the larger space (left-right)}
-
-\input{src/definitions/g-outer-product}
-
+\input{src/definitions/g-outer-product2}
 \textcolor{red}{THE EXTERIOR PRODUCT IS A GRADE LOWERING OPERATION, REPRESENTING WHAT? represents the orthogonal complement of the smaller space in the larger space (left-right)}
 
 \newpage

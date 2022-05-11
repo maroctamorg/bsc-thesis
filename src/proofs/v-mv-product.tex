@@ -1,0 +1,42 @@
+\begin{proof}
+	We shall assume that $A_r$ is an $r$-blade: the case of a homogeneous multivector follows directly using distributivity of the geometric product (since an $r$-grade homogeneous multivector is a sum of $r$-blades).
+
+	Recall the definition of the inner product between two vectors (def. \ref{d:inner-product1})
+	\[a | b = \frac{1}{2}(ab + ba)\]
+	We can reverse it to obtain:
+	\[ab = 2 a | b - ba\]
+	Repeated application of the above allows us to permute indices in a product, as follows:
+	\begin{align*}
+		aA_r = aa_1a_2 \ldots a_r &= 2a|a_1a_2 \ldots a_r - a_1aa_2 \ldots a_r \\
+		&= 2a|a_1a_2 \ldots a_r - 2a|a_2a_1 \ldots a_r + a_1aa_2 \ldots a_r \\
+		&= \ldots \\
+		&= 2 \sum_{k=1}^r (-1)^{k+1}a|a_k a_1 \ldots \check{a_k} \ldots a_r + (-1)^ra_1a_2 \ldots a_ra \\
+		&= \sum_{k=1}^r (-1)^{k+1}a|a_k a_1 \ldots \check{a_k} \ldots a_r + \sum_{k=1}^r (-1)^{k+1}a|a_k a_1 \ldots \check{a_k} \ldots a_r + (-1)^ra_1a_2 \ldots a_ra
+	\end{align*}
+
+	Notice that the first term above has grade $r-1$: we will demonstrate that this is indeed the lowest grade term and denote it $a | A_r$.
+	
+	Let us rewrite the sum using invertibility of vectors (th. \ref{l:invertibility}):
+	\begin{align*}
+		a | A_r &= \sum_{k=1}^r (-1)^{k+1}a|a_k a_1 \ldots \check{a_k} \ldots a_r\\
+				&= \sum_{k=1}^r (-1)^{k+1}a|a_k a_k^{-1}a_k a_1 \ldots \check{a_k} \ldots a_r\\
+				&= \sum_{k=1}^r (-1)^{k+1}a|a_k a_k^{-1} A_r 
+	\end{align*}
+
+	Substracting the above from $aA_r$ and factoring:
+	\[aA_r - a | A_r = (a - \sum_{k=1}^r (-1)^{k+1}a|a_k a_k^{-1})A_r \equiv bA_r\]
+	
+	Since by construction, $b | a_k = 0 \forall k \in \{1, \ldots r\}$, it follows that the above is a product of $r+1$ anticommuting vectors and thus has grade $r+1$ by axiom \ref{a:ga-axiom5}. We are justified in writing:
+
+	\begin{align*}
+		aA_r &= a | A_r + a \wedge A_r \\
+		a | A_r &= \sum_{k=1}^r (-1)^{k+1}a|a_k a_1 \ldots \check{a_k} \ldots a_r \\
+		a \wedge A_r &= a | A_r + (-1)^rA_ra
+	\end{align*}
+
+	From which the lemma follows straightforwardly by substituting the third expresion into the first:
+	\begin{align*}
+		aA_r &= 2a | A_r + (-1)^rA_ra \Rightarrow a | A_r = \frac{1}{2} (aA_r - (-1)^rA_ra) \\
+		aA_r &= 2a \wedge A_r - (-1)^rA_ra \Rightarrow a \wedge A_r = \frac{1}{2} (aA_r + (-1)^rA_ra)
+	\end{align*}
+\end{proof}
