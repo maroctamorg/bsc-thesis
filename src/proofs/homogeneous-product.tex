@@ -1,0 +1,24 @@
+\begin{proof}
+	We prove this by induction on $r \leq s$ when $A_r$ and $B_s$ are simple $r$- and $s$-vectors respectively.
+
+	The case $r=1,\quad s=1$ is true by Definition \ref{t:geometric-product}.
+	The case $r=1,\quad s>1$ is true by Lemma \ref{l:v-mv-product}.
+	Assume the expression holds for $r = q,\quad s > r$, we show that it holds for $r+1$:
+	\begin{align*}
+		A_{r+1}B_s = &a_{r+1}A_rB_s = a_{r+1}\sum_{k=0}^r \g{A_rB_s}{s-r+2k} = \\
+		= &\sum_{k=0}^r a_{r+1}\g{A_rB_s}{s-r+2k} = \\
+		= &\sum_{k=0}^r \left[a_{r+1} | \g{A_rB_s}{s-r+2k} + a_{r+1} \wedge \g{A_rB_s}{s-r+2k}\right]\\
+		= &a | \g{A_rB_s}{s-r} + \\
+		  &\sum_{k=1}^r \left[a_{r+1} | \g{A_rB_s}{s-r+2k} + a_{r+1} \wedge \g{A_rB_s}{s-r+2(k-1)}\right]\\
+		  &a\wedge \g{A_rB_s}{s+r}
+	\end{align*}
+	where in the last step, we have grouped terms together by grade:
+	\begin{align*}
+		&\g{A_{r+1}B_s}{s-(r+1)} \equiv a_{r+1} | \g{A_rB_s}{s-r} \\
+		&\g{A_{r+1}B_s}{s-(r+1)+2k} \equiv a | \g{A_rB_s}{s-r+2k} + a \wedge \g{A_rB_s}{s-r+2(k-1)} \\
+		&\g{A_{r+1}B_s}{r+1+s} \equiv a \wedge \g{A_rB_s}{s+r}
+	\end{align*}
+
+	The case where $s \leq r$ follows by induction on $s$ (the same argument as above).
+	The general case for homogeneous multivectors follows by distributivity of the geometric product.
+\end{proof}

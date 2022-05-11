@@ -8,7 +8,7 @@ I have not been able to convince myself that the standard formulation is justifi
 	The \textbf{Universal Geometric Algebra} is the \textcolor{red}{category} of algebras obeying a specific set of axioms. Its elements (the Geometric or Clifford Algebras) are specified by the choice of a finite-dimensional inner product space over the reals.
 \end{definition}
 
-A \textbf{UGA} is then a template for Geometric Algebras: given a finite-dimensional linear space, and an inner product, there exists a unique axiom-abiding algebra which contains the linear space and whose symmetrized product corresponds to the prescribed inner product. We will later on observe, that this is in fact the Universal Property of Clifford Algebras.
+A \textbf{UGA} is then a template for Geometric Algebras: given a finite-dimensional linear space, and an inner product, there exists a unique axiom-abiding algebra which contains the linear space and whose symmetrized product corresponds to the prescribed inner product. \textcolor{red}{We will later on observe, that this is in fact the Universal Property of Clifford Algebras}.
 
 A note on nomenclature is urgently in order: what we call \textbf{Universal Geometric Algebra} is in fact not an algebra; we will continue to refer to it as such, and in fact we will discuss the generally applicable definitions and results in the context of an abstract algebra whose formal product obeys the axioms, and whose abstract linear space will always be assumed to be of a sufficiently high-dimension such that it does not get in the way of the argument.
 
@@ -41,14 +41,17 @@ First off, we generalize the definition of the inner and outer products to homog
 \input{src/definitions/g-inner-product1}
 \input{src/definitions/g-outer-product1}
 
-We now prove the following steppingstone lemma regarding the product of a vector with a homogenous multivector.
+We now prove the following lemma regarding the product of a vector with a homogenous multivector.
 \input{src/lemmas/v-mv-product}
 \input{src/proofs/v-mv-product}
 
+\textcolor{red}{ATTRIBUTE APPROACH OF THE PROOF TO HESTENES}
+
 Using the above lemma, we can prove the following important property of the geometric product between homogeneous multivectors.
 \input{src/theorems/homogeneous-product}
-%\input{src/proofs/homogeneous-product}
-\textcolor{red}{ATTRIBUTE APPROACH OF THE PROOF TO HESTENES}
+\input{src/proofs/homogeneous-product}
+
+\textcolor{red}{ATTRIBUTE APPROACH OF THE PROOF TO CHISOLM}
 
 As a corollary, we obtain our sought-after result.
 \input{src/corollaries/even-subalgebra}
