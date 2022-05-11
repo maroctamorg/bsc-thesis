@@ -18,8 +18,47 @@ tabnew
 tabnew
 tabnew
 tabnew
+tabnew
 tabrewind
 edit chapters/geometric-algebra.tex
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+argglobal
+balt definitions/elements.tex
+let s:l = 48 - ((19 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 48
+normal! 039|
+tabnext
+edit ../../bsc-seminar/seminar.tex
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+argglobal
+2argu
+if bufexists("../../bsc-seminar/seminar.tex") | buffer ../../bsc-seminar/seminar.tex | else | edit ../../bsc-seminar/seminar.tex | endif
+balt proofs/inner-product.tex
+let s:l = 33 - ((16 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 33
+normal! 0
+tabnext
+edit ../../bsc-seminar/seminar.tex
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -32,31 +71,29 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 33 + 18) / 37)
 exe 'vert 1resize ' . ((&columns * 105 + 105) / 211)
-exe '2resize ' . ((&lines * 33 + 18) / 37)
 exe 'vert 2resize ' . ((&columns * 105 + 105) / 211)
 argglobal
-let s:l = 15 - ((14 * winheight(0) + 16) / 33)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 15
-normal! 0
-wincmd w
-argglobal
-2argu
-balt chapters/geometric-algebra.tex
-let s:l = 1 - ((0 * winheight(0) + 16) / 33)
+if bufexists("../../bsc-seminar/seminar.tex") | buffer ../../bsc-seminar/seminar.tex | else | edit ../../bsc-seminar/seminar.tex | endif
+balt ../brainstorm/topic-structure.txt
+let s:l = 1 - ((0 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 1
 normal! 0
 wincmd w
-exe '1resize ' . ((&lines * 33 + 18) / 37)
+argglobal
+if bufexists("../brainstorm/topic-structure.txt") | buffer ../brainstorm/topic-structure.txt | else | edit ../brainstorm/topic-structure.txt | endif
+balt ../../bsc-seminar/seminar.tex
+let s:l = 1 - ((0 * winheight(0) + 18) / 37)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+wincmd w
 exe 'vert 1resize ' . ((&columns * 105 + 105) / 211)
-exe '2resize ' . ((&lines * 33 + 18) / 37)
 exe 'vert 2resize ' . ((&columns * 105 + 105) / 211)
 tabnext
 edit thesis.tex
@@ -72,31 +109,12 @@ argglobal
 1argu
 if bufexists("thesis.tex") | buffer thesis.tex | else | edit thesis.tex | endif
 balt chapters/geometric-algebra.tex
-let s:l = 105 - ((34 * winheight(0) + 17) / 35)
+let s:l = 58 - ((6 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 105
-normal! 09|
-tabnext
-edit title.tex
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-argglobal
-if bufexists("title.tex") | buffer title.tex | else | edit title.tex | endif
-balt thesis.tex
-let s:l = 3 - ((2 * winheight(0) + 17) / 34)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 3
-normal! 020|
+keepjumps 58
+normal! 027|
 tabnext
 edit ../res/references.bib
 set splitbelow splitright
@@ -110,7 +128,7 @@ set winwidth=1
 argglobal
 if bufexists("../res/references.bib") | buffer ../res/references.bib | else | edit ../res/references.bib | endif
 balt thesis.tex
-let s:l = 1 - ((0 * winheight(0) + 17) / 34)
+let s:l = 1 - ((0 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -129,20 +147,38 @@ set winwidth=1
 argglobal
 if bufexists("chapters/even-divisibility.tex") | buffer chapters/even-divisibility.tex | else | edit chapters/even-divisibility.tex | endif
 balt ../res/references.bib
-let s:l = 6 - ((5 * winheight(0) + 17) / 34)
+let s:l = 6 - ((5 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 6
-normal! 023|
-tabnext 2
+normal! 0
+tabnext 6
 set stal=1
-badd +1 chapters/geometric-algebra.tex
+badd +15 chapters/geometric-algebra.tex
 badd +1 ../brainstorm/topic-structure.txt
-badd +0 thesis.tex
-badd +0 ../res/references.bib
-badd +0 title.tex
-badd +8 chapters/even-divisibility.tex
+badd +1 thesis.tex
+badd +3 title.tex
+badd +1 ../res/references.bib
+badd +6 chapters/even-divisibility.tex
+badd +20 definitions/ga-axioms.tex
+badd +18 definitions/ga-elements.tex
+badd +213 ../../bsc-seminar/seminar.tex
+badd +2 theorems/geometric-product.tex
+badd +2 lemmas/inner-product.tex
+badd +2 lemmas/exterior-product.tex
+badd +4 proofs/geometric-product.tex
+badd +7 proofs/inner-product.tex
+badd +1 definitions/algebra.tex
+badd +2 proofs/exterior-product.tex
+badd +4 corollaries/orthogonality.tex
+badd +1 theorems/even-subalgebra.tex
+badd +3 theorems/homogeneous-product.tex
+badd +4 definitions/g-inner-product.tex
+badd +4 definitions/g-outer-product.tex
+badd +1 corollaries/l-independence.tex
+badd +3 corollaries/even-subalgebra.tex
+badd +17 definitions/elements.tex
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -154,7 +190,6 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
