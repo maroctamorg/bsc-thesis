@@ -1,3 +1,4 @@
+# LaTeX BUILD FILES
 *.aux
 *.log
 *.lot
@@ -9,4 +10,7 @@
 *.blg
 *.fls
 *.fdb_latexmk
+
+# VIM SESSION FILES
+*.vim
 *.swp
