@@ -1,9 +1,16 @@
 \begin{proof}
-	Consider the following element
-	\[u = e_{12}e_{13}e_{(n-1)n}\]
+	Let $n = 4$ and onsider the following element
+	\[u = e_{12}e_{13}e_{34}\]
 	We show that it squares to $1$:
 	\begin{align*}
-		u^2 = &e_{12}e_{13}e_{(n-1)n}e_{12}e_{13}e_{(n-1)n}\\
-			= &e_{12}e_{12}e_{13}e_{13}e_{(n-1)n}e_{(n-1)n}\\
-			= &-1
+		u^2 = &e_{12}e_{13}e_{34}e_{12}e_{13}e_{34}\\
+			= &e_{12}e_{12}e_{13}e_{13}e_{34}e_{34}\\
+			= &1
 	\end{align*}
+	It thus follows that $u^2 - 1 = 0$, by factoring this expression we have found two zero-divisors:
+	\begin{align*}
+		&u^2 - 1 = (u-1)(u+1) = 0 \\
+		&u \pm 1 \neq 0
+	\end{align*}
+	By Theorem \ref{t:zero-divisor}, $\G_+(\E_4)$ is not a division algebra. Moreover since all higher-dimensional even subalgebras contain $\G(\E_4)$, they all contain the above zero divisors and as such are also not division algebras.
+\end{proof}
