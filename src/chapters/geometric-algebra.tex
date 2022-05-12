@@ -1,4 +1,5 @@
 \section{The Universal Geometric Algebra}
+\subsection{The UGA as a \textcolor{red}{Category}}
 
 The fundamental concept in Geometric Algebra is that of the \textbf{Universal Geometric Algebra} (UGA for short). It is usually formulated as an infinite-dimensional abstract algebra obeying a certain set of axioms, within which all the Geometric Algebras are contained. \textcolor{red}{CITATION?!}
 
@@ -11,9 +12,7 @@ A \textbf{UGA} is then a template for Geometric Algebras: given a finite-dimensi
 
 A note on nomenclature is urgently in order: what we call \textbf{Universal Geometric Algebra} is in fact not an algebra; we will continue to refer to it as such, and in fact we will discuss the generally applicable definitions and results in the context of an abstract algebra whose formal product obeys the axioms, and whose abstract linear space will always be assumed to be of a sufficiently high-dimension such that it does not get in the way of the argument.
 
-\newpage
-
-\section{Axioms, Elements and Products}
+\subsection{Axioms, Elements and Products}
 
 A Geometric Algebra $\G$  is a finite-dimensional unitary associative algebra over the reals obeying the following axioms:
 \input{src/definitions/ga-axioms}
@@ -66,7 +65,9 @@ Moreover, we are now equipped to provide general, explicit definitions for the i
 
 \newpage
 
-\section{Bases and Frames}
+\section{Construction of Even Subalgebras}
+
+\subsection{Bases, Frames and Universal Property}
 
 \textcolor{red}{DISCUSS THE VALIDITY OF THE AXIOMS AND PROVE THAT GEOMETRIC ALGEBRAS ARE SIMPLY CLIFFORD ALGEBRAS (DECIDE IF I SHOULD RELAX POSITIVE-DEFINITENESS REQUIREMENT AND DRAW DISTINCTION THERE OR IF I DRAW DISTINCTION AT KEEPING THE INNER PRODUCT FORMAL OR BOTH); PROVE UNIVERSAL PROPERTY}
 
@@ -93,3 +94,13 @@ The recipe for constructing a Geometric Algebra is thus, as follows:
 % With the above terminology we can also straightforwardly prove the Universal Property of a Geometric Algebra.
 % \input{src/theorem/unpr-galgebra}
 % \input{src/proof/unpr-galgebra}
+
+\subsection{Even Subalgebras}
+
+To conclude our introduction to Geometric Algebra, we discuss construction of even subalgebras and introduce some notation and results that will be of use in the next chapter.
+
+An even subalgebra has its own basis which is distinct from that of the original algebra; this is made explicit in the following self-evident lemma:
+\input{src/lemmas/even-basis}
+We will make use of the above properties in computation, without explicit mention.
+
+An even subalgebra is constructed from its basis precisely in the same manner as a geometric algebra.
