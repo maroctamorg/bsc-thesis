@@ -65,9 +65,42 @@ Moreover, we are now equipped to provide general, explicit definitions for the i
 
 \newpage
 
-\section{Constructing a Geometric Algebra}
+\section{Construction of Even Subalgebras}
+
+\subsection{Bases, Frames and Universal Property}
 
 \textcolor{red}{DISCUSS THE VALIDITY OF THE AXIOMS AND PROVE THAT GEOMETRIC ALGEBRAS ARE SIMPLY CLIFFORD ALGEBRAS (DECIDE IF I SHOULD RELAX POSITIVE-DEFINITENESS REQUIREMENT AND DRAW DISTINCTION THERE OR IF I DRAW DISTINCTION AT KEEPING THE INNER PRODUCT FORMAL OR BOTH); PROVE UNIVERSAL PROPERTY}
 
 \textcolor{red}{OR \\ PROVE UNIVERSAL PROPERTY (FORMAL CONSTRUCTION) FROM AXIOM, DISCUSS BASES (PRACTICAL CONSTRUCTION; before universal property?), GRADE-DIMENSION AND PSEUDOSCALAR}
 
+A Geometric Algebra is only realized into a concrete algebra once an inner-product space is specified. It is then straightforward to construct the whole algebra given a basis for the inner-product space. But first, we need some specific terminology.
+
+\input{src/definitions/basis}
+\input{src/definitions/frame}
+\input{src/definitions/pseudoscalar}
+
+The distinction between basis and frame is very important: a frame is to a basis, as a geometric algebra is to its generating vector space.
+For finite-dimensional spaces, we can always produce an orthonormal basis by the Gran-Schmidt process, so we will henceforth assume all bases to be orthonormal unless otherwise specified.
+
+A frame can be identified one-to-one with the power set of a basis, as it is composed of all the possible combinations of the basis elements without repetition and up to permutation (we identify the unit scalar in the frame with the empty subset of the basis). It follows that the dimension of a geometric algebra $\G$ (as a vector space) is $2^{\gr{\G}}$.
+
+The recipe for constructing a Geometric Algebra is thus, as follows:
+\begin{enumerate}
+	\item construct an orthonormal basis for the inner-product space: this will be the basis of the algebra
+	\item construct the frame of the algebra by taking products between non-repeating unit vectors
+	\item generate the rest of the algebra as a vector space with the frame as its basis
+\end{enumerate}
+
+% With the above terminology we can also straightforwardly prove the Universal Property of a Geometric Algebra.
+% \input{src/theorem/unpr-galgebra}
+% \input{src/proof/unpr-galgebra}
+
+\subsection{Even Subalgebras}
+
+To conclude our introduction to Geometric Algebra, we discuss construction of even subalgebras and introduce some notation and results that will be of use in the next chapter.
+
+An even subalgebra has its own basis which is distinct from that of the original algebra; this is made explicit in the following self-evident lemma:
+\input{src/lemmas/even-basis}
+We will make use of the above properties in computation, without explicit mention.
+
+An even subalgebra is constructed from its basis precisely in the same manner as a geometric algebra.
