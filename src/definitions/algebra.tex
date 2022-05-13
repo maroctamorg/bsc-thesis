@@ -1,9 +1,18 @@
 \begin{definition}[Algebra]\label{d:algebra}
-    A real algebra $A$ is a real vector space equipped with a bilinear product; i.e.: a set closed under two operations ($+, \cdot: A\times A \to A$) and an action ($*: \R \times A \to A$), with the properties:
-    \[\begin{alignedat}{3}
-        &+ &&: \ &&\text{associative, invertible, commutative}\\
-        &\cdot &&: \ &&\text{bilinear}: (a*x + y)\cdot (b*z + t) = \\
-        & && &&= ab*xz + a*xt + b*yz + yt  \\
-        &* &&: \ &&\text{associative, distributive}
-    \end{alignedat}\]
+    A real algebra $A$ is a real vector space equipped with a bilinear product; i.e. a set closed under two operations ($+, \cdot: A\times A \to A$) and an action ($*: \R \times A \to A$), with the properties:
+
+	\begin{itemize}
+		\item The addition operation is associative, invertible and commutative.
+		\item The multiplication by a scalar is associative and distributive with regards to the addition operation.
+		\item The product is bilinear:
+				\[(a*x + y)\cdot (b*z + t) = ab*xz + a*xt + b*yz + yt\]
+	\end{itemize}
+
+%    \[\begin{alignedat}{3}
+%        &+ &&: \ &&\text{associative, invertible, commutative}\\
+%        &\cdot &&: \ &&\text{bilinear}: (a*x + y)\cdot (b*z + t) = \\
+%        & && &&= ab*xz + a*xt + b*yz + yt  \\
+%        &* &&: \ &&\text{associative, distributive}
+%    \end{alignedat}\]
+
 \end{definition}

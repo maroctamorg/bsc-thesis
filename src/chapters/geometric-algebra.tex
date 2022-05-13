@@ -1,13 +1,13 @@
 \section{The Universal Geometric Algebra}
 
-The fundamental concept in Geometric Algebra is that of the \textbf{Universal Geometric Algebra} (UGA for short). It is usually formulated as an infinite-dimensional abstract algebra obeying a certain set of axioms, within which all the Geometric Algebras are contained. \textcolor{red}{CITATION?!}
+The fundamental concept in Geometric Algebra is that of the \textbf{Universal Geometric Algebra} (UGA for short). It is usually formulated as an infinite-dimensional abstract algebra obeying a certain set of axioms, within which all the Geometric Algebras are contained \cite{ga-origin}. 
 
 I have not been able to convince myself that the standard formulation is justified without addressing the peculiarities of infinite-dimensional inner product spaces; so we shall do otherwise, and define it as follows:
 \begin{definition}[Universal Geometric Algebra]
-	The \textbf{Universal Geometric Algebra} is the \textcolor{red}{category} of algebras obeying a specific set of axioms. Its elements (the Geometric or Clifford Algebras) are specified by the choice of a finite-dimensional inner product space over the reals.
+	The \textbf{Universal Geometric Algebra} is a family of algebras obeying a specific set of axioms. Its elements (the Geometric or Clifford Algebras) are specified by the choice of a finite-dimensional inner product space over the reals.
 \end{definition}
 
-A \textbf{UGA} is then a template for Geometric Algebras: given a finite-dimensional linear space, and an inner product, there exists a unique axiom-abiding algebra which contains the linear space and whose symmetrized product corresponds to the prescribed inner product. \textcolor{red}{We will later on observe, that this is in fact the Universal Property of Clifford Algebras}.
+A \textbf{UGA} is then a template for Geometric Algebras: given a finite-dimensional linear space, and an inner product, there exists a unique axiom-abiding algebra which contains the linear space and whose symmetrized product corresponds to the prescribed inner product.
 
 A note on nomenclature is urgently in order: what we call \textbf{Universal Geometric Algebra} is in fact not an algebra; we will continue to refer to it as such, and in fact we will discuss the generally applicable definitions and results in the context of an abstract algebra whose formal product obeys the axioms, and whose abstract linear space will always be assumed to be of a sufficiently high-dimension such that it does not get in the way of the argument.
 
@@ -46,13 +46,15 @@ We now prove the following lemma regarding the product of a vector with a homoge
 \input{src/lemmas/v-mv-product}
 \input{src/proofs/v-mv-product}
 
+The above proof is due to \textit{Hestenes} (p. 8-10)\cite{ga-origin}
+
 \textcolor{red}{ATTRIBUTE APPROACH OF THE PROOF TO HESTENES}
 
 Using the above lemma, we can prove the following important property of the geometric product between homogeneous multivectors.
 \input{src/theorems/homogeneous-product}
 \input{src/proofs/homogeneous-product}
 
-\textcolor{red}{ATTRIBUTE APPROACH OF THE PROOF TO CHISOLM}
+The above proof is due to \textit{Chisolm} (p. 20-21)\cite{ga-chisolm}
 
 As a corollary, we obtain our sought-after result.
 \input{src/corollaries/even-subalgebra}
@@ -60,17 +62,11 @@ As a corollary, we obtain our sought-after result.
 
 Moreover, we are now equipped to provide general, explicit definitions for the inner and outer products in the case of arbitrary multivectors.
 \input{src/definitions/g-inner-product2}
-\textcolor{red}{THE INNER PRODUCT IS A GRADE LOWERING OPERATION, REPRESENTING WHAT? represents the orthogonal complement of the smaller space in the larger space (left-right)}
 \input{src/definitions/g-outer-product2}
-\textcolor{red}{THE EXTERIOR PRODUCT IS A GRADE LOWERING OPERATION, REPRESENTING WHAT? represents the orthogonal complement of the smaller space in the larger space (left-right)}
 
 \newpage
 
 \section{Bases and Frames}
-
-\textcolor{red}{DISCUSS THE VALIDITY OF THE AXIOMS AND PROVE THAT GEOMETRIC ALGEBRAS ARE SIMPLY CLIFFORD ALGEBRAS (DECIDE IF I SHOULD RELAX POSITIVE-DEFINITENESS REQUIREMENT AND DRAW DISTINCTION THERE OR IF I DRAW DISTINCTION AT KEEPING THE INNER PRODUCT FORMAL OR BOTH); PROVE UNIVERSAL PROPERTY}
-
-\textcolor{red}{OR \\ PROVE UNIVERSAL PROPERTY (FORMAL CONSTRUCTION) FROM AXIOM, DISCUSS BASES (PRACTICAL CONSTRUCTION; before universal property?), GRADE-DIMENSION AND PSEUDOSCALAR}
 
 A Geometric Algebra is only realized into a concrete algebra once an inner-product space is specified. It is then straightforward to construct the whole algebra given a basis for the inner-product space. But first, we need some specific terminology.
 
