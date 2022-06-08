@@ -1,3 +1,19 @@
 \begin{lemma}[Exterior Product]\label{l:exterior-product}
-	The antisymmetrized product of two vectors is an exterior product.
+	The exterior product of two vectors is simply their antisymmetrized geometric product.
 \end{lemma}
+\begin{proof}
+	Consider the geometric product of two vectors in terms of its projection and rejection, and recall Definition \ref{d:exterior-product}:
+	\[uv = P(uv, \{u,v\}) + R(uv, \{u,v\}) = \alpha + \beta u + \gamma v + u \wedge v\]
+	By Lemma \ref{l:inner-product}, we have $\alpha = u | v$; we show that $\beta = \gamma = 0$, by contradiction. Assume $\beta \neq 0 \neq \gamma$, and consider the following products:
+	\begin{align*}
+		&uvv = uv^2 = u\mg{v}^2 \\
+		&uvv = (uv)v = (u | v)v + \beta uv + \gamma \mg{v}^2 + (u \wedge v)v
+	\end{align*}
+
+	%\[\beta u + \gamma v + u \wedge v \equiv uv - u | v = \frac{1}{2}(uv - vu)\]
+	%Since the above is antisymmetric, we may swap $u$ and $v$ by introducing a negative sign:
+	%\begin{align*}
+	%	&-\beta v -\gamma u - v \wedge u = \beta u + \gamma v + u \wedge v \Rightarrow \\
+	%	&(\beta + \gamma)(u+v) = 0 \Rightarrow \beta = -\gamma 
+	%\end{align*}	
+\end{proof}
