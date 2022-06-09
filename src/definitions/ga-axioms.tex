@@ -1,5 +1,5 @@
 \begin{axiom}\label{a:ga-axiom1}
-    $\G$ contains $\R$ as a subalgebra and a real (finite-dimensional) vector space $\V$ as a subspace; these generate the entire algebra. We call elements of $\R$ scalars, and elements of $\V$ vectors.
+    $\G$ contains $\R$ as a subalgebra and $\V$ as a subspace; these generate the entire algebra. We call elements of $\R$ scalars, and elements of $\V$ vectors.
 \end{axiom}
 
 \begin{axiom}\label{a:ga-axiom2}
@@ -7,20 +7,22 @@
 \end{axiom}
 
 \begin{axiom}\label{a:ga-axiom3}
-    The square of any vector is a real number.
+    The square of a vector corresponds to its inner product with itself.
+	\[\forall v \neq 0 \in \V \quad v^2 \equiv vv = v|v = |v|^2\]
 \end{axiom}
 
-\begin{axiom}\label{a:ga-axiom4}
-	The formal product on $\V$ is positive-definite, i.e.:
-\[\forall v \neq 0 \in \V \quad vv > 0\]
-\end{axiom}
-\begin{remark}\label{r:ga-axiom4}
-	The above axiom distinguishes a Clifford Algebra from a Geometric Algebra in our treatment: a Clifford Algebra only requires that the symmetrized product be a quadratic form. Positive-Definiteness is usually not required in standard treatments of Geometric Algebra and thus the terms are often used interchangeably: we will not be doing so in this thesis.
+%\begin{axiom}\label{a:ga-axiom4}
+%	The formal product on $\V$ is positive-definite, i.e.:
+%\[\forall v \neq 0 \in \V \quad vv > 0\]
+%\end{axiom}
+
+\begin{remark}\label{r:ga-axiom3}
+	The above axiom distinguishes a Clifford Algebra from a Geometric Algebra in our treatment: a Clifford Algebra only requires a quadratic form on a vector space $\V$. Standard treatments of Geometric Algebra also do not make such a strict requirement and thus the terms are often used interchangeably: we will not be doing so in this thesis.
 \end{remark}
 
-\begin{axiom}\label{a:ga-axiom5}
-%	The antisymmetrized product of linearly independent vectors	produces an element which does not belong to $\R \bigoplus \V$, we call this product the \textbf{exterior product} and denote it $u \wedge v = \frac{1}{2} (uv - vu)$. 
-	The product of linearly independent vectors produces an element that is not in the linear span of its factors: i.e. if $\{v_i\}_{i=1}^n$ is a linearly independent set, then:
-	\[\prod_{i=1}^n v_i \notin \mathrm{span}\{\prod_{j=1}^n v_{i_j} \forall i_j : \{1..n\} \to \{0..n\} \} \equiv F(\{v_i\}_{i=1}^n)\]
-	were we define $v_0 = 1$ for notational convenience.
-\end{axiom}
+%\begin{axiom}\label{a:ga-axiom5}
+%%	The antisymmetrized product of linearly independent vectors	produces an element which does not belong to $\R \bigoplus \V$, we call this product the \textbf{exterior product} and denote it $u \wedge v = \frac{1}{2} (uv - vu)$. 
+%	The product of linearly independent vectors produces an element that is not in the linear span of its factors: i.e. if $\{v_i\}_{i=1}^n$ is a linearly independent set, then:
+%	\[\prod_{i=1}^n v_i \notin \mathrm{span}\{\prod_{j=1}^n v_{i_j} \forall i_j : \{1..n\} \to \{0..n\} \} \equiv F(\{v_i\}_{i=1}^n)\]
+%	were we define $v_0 = 1$ for notational convenience.
+%\end{axiom}

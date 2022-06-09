@@ -1,0 +1,10 @@
+\begin{proof}
+	Every multivector can be written as a finite sum of versors, so it suffices to prove the statement for an arbitrary versor.
+	Consider an arbitrary set of vectors expressed in a given orthonormal basis $\{v_i \equiv \sum_{j=1}^n v_i^je_j\}_{i=1}^m$; we expand their product using bilinearity:
+	\begin{align*}
+		\prod_{i=1}^m v_i &= \prod_{i=1}^m \sum_{j=1}^n v_i^j e_j \\
+						  &= \sum_{j_i : \{1..m\} \to \{1..n\}} \left(\prod_{i=1}^m v_i^{j_i}\right) \left(\prod_{i=1}^m e_{j_i}\right)
+	\end{align*}
+	It follows from Corollary \ref{c:orthonormal-bases} that the product of the basis vectors in each term is a $k$-blade, where $k$ is the number of unit vectors appearing an odd number of times in the product.
+	Uniqueness follows from the freeness of the algebra: the product of orthogonal vectors is a formal product subject only to bilinearity and antisymmetry, so that distinct products of orthonormal basis vectors are linearly independent and form in fact a vector space-basis for the whole algebra; we will reformulate this in Section \ref{s:bases-frames}.
+\end{proof}

@@ -1,9 +1,13 @@
 \begin{proof}
 	Consider the following expression, and recall Axiom \ref{a:ga-axiom3}:
-    \begin{align*}
-        &(u+v)^2 = u^2 + v^2 + uv + vu \Leftrightarrow \\
-        &2u|v = (u+v)^2 - u^2 - v^2 \in \R
-    \end{align*}
-	So the symmetrized product maps into $\R$ (i.e. $| : \V \times \V \to \R$). By Definition \ref{d:algebra}, the geometric product is bilinear and so is the symmetrized product as it is a linear function of the bilinear products; moreover, by Axiom \ref{a:ga-axiom4}, it is also positive-definite. We conclude that $u|v = uv + vu$ is indeed an inner product on $\V$.
+	\begin{alignat*}{2}
+		&(u+v)^2 &&= u^2 + v^2 + uv + vu \Leftrightarrow \\
+		&2s(u,v) &&= (u+v)^2 - u^2 - v^2 \\
+		& \ &&\overset{\mathclap{\ref{a:ga-axiom3}}}= (u+v)|(u+v) - u|u - v|v \\
+		& \ &&= u|v + v|u = 2u|v 
+    \end{alignat*}
+	We conclude
+	\[s(u,v) \equiv u|v\]
+	%So the symmetrized product maps into $\R$ (i.e. $| : \V \times \V \to \R$). By Definition \ref{d:algebra}, the geometric product is bilinear and so is the symmetrized product as it is a linear function of the bilinear products; moreover, by Axiom \ref{a:ga-axiom4}, it is also positive-definite. We conclude that $u|v = uv + vu$ is indeed an inner product on $\V$.
 	
 \end{proof}
