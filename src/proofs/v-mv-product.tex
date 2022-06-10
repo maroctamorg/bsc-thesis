@@ -15,24 +15,24 @@
 		&+ (-1)^ra_1a_2 \ldots a_ra
 	\end{align*}
 
-	Notice that the first term above has grade $r-1$: we will demonstrate that this is indeed the lowest grade term and denote it $a | A_r$.
+	Notice that the first term above has grade $r-1$: we will demonstrate that this is indeed the lowest grade term. For now, we preemptively denote it $a | A_r$.
 	
 	Let us rewrite the sum using invertibility of vectors (th. \ref{l:invertibility}):
 	\begin{align*}
 		a | A_r &= \sum_{k=1}^r (-1)^{k+1}a|a_k a_1 \ldots \check{a_k} \ldots a_r\\
 				&= \sum_{k=1}^r (-1)^{k+1}a|a_k a_k^{-1}a_k a_1 \ldots \check{a_k} \ldots a_r\\
-				&= \sum_{k=1}^r (-1)^{k+1}a|a_k a_k^{-1} A_r 
+				&= \sum_{k=1}^r a|a_k a_k^{-1} A_r 
 	\end{align*}
 
 	Substracting the above from $aA_r$ and factoring:
-	\[aA_r - a | A_r = (a - \sum_{k=1}^r (-1)^{k+1}a|a_k a_k^{-1})A_r \equiv bA_r\]
+	\[aA_r - a | A_r = (a - \sum_{k=1}^r a|a_k a_k^{-1})A_r \equiv bA_r\]
 	
 	Since by construction, $b | a_k = 0 \forall k \in \{1, \ldots r\}$, it follows by Corollary \ref{c:orthogonality} that the above is a product of $r+1$ anticommuting vectors and thus has grade $r+1$ by Definition \ref{d:k-blades}. We are justified in writing:
 
 	\begin{align*}
-		&aA_r = a | A_r + a \wedge A_r \\
-		&a | A_r = \sum_{k=1}^r (-1)^{k+1}a|a_k a_1 \ldots \check{a_k} \ldots a_r \\
-		&a \wedge A_r = a | A_r + (-1)^rA_ra
+		aA_r &= a | A_r + a \wedge A_r \\
+		a | A_r &= \sum_{k=1}^r (-1)^{k+1}a|a_k a_1 \ldots \check{a_k} \ldots a_r \\
+		a \wedge A_r &= a | A_r + (-1)^rA_ra
 	\end{align*}
 
 	From which the lemma follows straightforwardly by substituting the third expression into the first:

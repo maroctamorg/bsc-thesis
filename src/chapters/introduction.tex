@@ -1,39 +1,38 @@
 \section{Historical Background}
 Geometric Algebra has its roots in the long-running pursuit of a mathematical framework for the description of physical space. Though the concept of vectors is ancient, in this section we shall focus on the developments starting in the 19th century.
 
-In the early 1800s, \textbf{Grassmann} was the first to formulate the notions of 'modern' linear algebra (vector spaces, bases, inner product and orthogonality); his development of exterior algebra through the introduction of the outer product, laid the key theoretical groundwork for Clifford's Geometric Algebra as it provided a formal algebraic system for vectors which is capable of describing higher-dimensional geometric primitives (p.28-29)\cite{ga-foundations}:
-\begin{align*}
-	\bv{e_i} | \bv{e_j} &= \delta_{ij}\\
-	\bv{e_i}\wedge \bv{e_j} &= -\bv{e_i}\wedge \bv{e_j}\\
-\end{align*}
+In the early 1800s, \textbf{Grassmann} was the first to formulate the notions of 'modern' linear algebra (vector spaces, bases, inner product and orthogonality) \cite{grassmann}; his development of exterior (or as he called it, extended) algebra laid the key theoretical groundwork for Clifford's Geometric Algebra. (p.28-29)\cite{ga-foundations}.
+%\begin{align*}
+%	\bv{e_i} | \bv{e_j} &= \delta_{ij}\\
+%	\bv{e_i}\wedge \bv{e_j} &= -\bv{e_i}\wedge \bv{e_j}\\
+%\end{align*}
 
 Around the same time, \textbf{Hamilton} extends the 2-dimensional algebra of the complex numbers into the 4-dimensional algebra of the quaternions, aiming at a formal vector algebra for $\mathbb{R}^3$.
-\begin{align*}
-    &q = q_0 + q_1\boldsymbol{i} + q_2\boldsymbol{j} + q_3\boldsymbol{k}\\
-    &i^2 = j^2 = k^2 = ijk = -1\\
-    &ij = k, ki = j, jk = i
-\end{align*}
-
-The quaternion algebra, though arithmetically complete and initially adopted by Maxwell in his formulation of electrodynamics, was not very popular due to its noncommutativity and the negative square of vectors, and eventually became relegated to very specific applications. Fundamentally, the shortcomings of the quaternions are grounded in the fact that quaternions provide a representation for the algebra of rotations in three-dimensions, and are not suitable to describing cartesian vectors in $\R^3$ \cite{ga-history}.
+%\begin{align*}
+%    &q = q_0 + q_1\boldsymbol{i} + q_2\boldsymbol{j} + q_3\boldsymbol{k}\\
+%    &i^2 = j^2 = k^2 = ijk = -1\\
+%    &ij = k, ki = j, jk = i
+%\end{align*}
+The quaternion algebra - though a division algebra and initially adopted by Maxwell in his formulation of electrodynamics - faced some pushback and was eventually mostly supplanted by Gibbs' vector algebra (especially in physical applications) and became relegated to specific applications. Some would argue that the shortcomings of the quaternions are grounded in the fact that quaternions provide a representation for the algebra of rotations in three-dimensions, and are not natural representations of cartesian vectors in $\R^3$ (a major shortcoming being that quaternions do not generalize to higher dimensions) \cite{ga-history}.
 
 \textbf{Gibbs} is responsible for the standard vector algebra that is most widely used today: his insight was to separate the product of quaternion 'vectors' into dot and cross products and formally replace the imaginary units with unit vectors that square to $+1$.
-\begin{align*}
-	vu &= -\sum v_iu_i + \sum_{i\to j\to k}(v_iu_j - v_ju_i)\boldsymbol{k} \\
-	&\equiv -v | u + v \times u
-\end{align*}
+%\begin{align*}
+%	vu &= -\sum v_iu_i + \sum_{i\to j\to k}(v_iu_j - v_ju_i)\boldsymbol{k} \\
+%	&\equiv -v | u + v \times u
+%\end{align*}
 
 The development of standard vector calculus (e.g. $\nabla, \nabla \cdot, \nabla \times$), applied extensively in Electrodynamics by \textbf{Heaviside}, lead to the widespread adoption of the formalism.
 
-Though it became the adopted formalism, \textbf{Gibbs}' vector algebra has its own deficiencies: it requires two different vectors product, lacks a division operation, the cross product is noncommutative and does not generalize to higher-dimensions.
+Though it became the adopted formalism, \textbf{Gibbs}' vector algebra has its own deficiencies: it requires two separate vectors product, lacks a division operation and its cross product does not generalize to higher-dimensions.
 
-\textbf{Clifford}'s  Geometric Algebra - introduced in the second half of the 19th century - aimed to supersed both formalisms by providing an arithmetically complete algebra that could be generalized to higher dimensions, and adequately describe both vectors and transformations in space; it extends Grassmann's work, incorporating Hamilton's quaternions into an abstractable and generalizable algebraic system for vectors, based on the geometric product:
-\begin{align*}
-    &uv = u | v + u \wedge v\\
-    &V = \sum \langle V\rangle_i\\
-    &\g{V}{r} = \sum v_i\bv{e_{i_1}}\wedge ... \wedge \bv{e_{i_r}}
-\end{align*}
+\textbf{Clifford}'s  Geometric Algebra - introduced in the second half of the 19th century - aimed to supersede both formalisms by providing an algebra that could be generalized to higher dimensions, and adequately and comprehensively describe both vectors and transformations in space; it extends Grassmann's work, incorporating Hamilton's quaternions into an abstractable and generalizable algebraic system for vectors, based on the geometric product.
+%\begin{align*}
+%    &uv = u | v + u \wedge v\\
+%    &V = \sum \langle V\rangle_i\\
+%    &\g{V}{r} = \sum v_i\bv{e_{i_1}}\wedge ... \wedge \bv{e_{i_r}}
+%\end{align*}
 
-Though \textbf{Clifford}'s work was neglected in his time, it has recently been repopularized by \textbf{David Hestenes} \cite{ga-origin}. We will be discussing the modern formalism in this thesis.
+Though \textbf{Clifford}'s work was mostly neglected in his time, it finds modern applications in a few areas of mathematics including differential geometry and mathematical physics (especially with regards to spinors). A mathematical project which aims to establish Geometric Algebra as a comprehensive, unifying framework for a variety of mathematical theories and tools related to the description of space, has also been put forth recently by \textbf{David Hestenes} \cite{ga-origin}.% We will be discussing the modern formalism in this thesis.
 
 \newpage
 
@@ -50,11 +49,11 @@ In Chapter \ref{ch:euclidean-even}, we construct the Geometric Algebras of the 1
 \newpage
 
 \section{Geometric Algebra as a Project}
-Geometric Algebra - as the mathematical project proposed by \textit{David Hestenes} and \textit{Garret Sobczyk} in \cite{ga-origin} - is a relatively new subject: as such, there seems to be no consolidated consensus as to the precise manner in which it ought to be presented. This paper will follow most closely the original approach in \cite{ga-origin}; nonetheless, I have taken the liberty to formulate and present some of these concepts in a slightly different manner (though only superficially so). In particular, this applies to the choice of axioms - inspired by \textit{Eric Chisolm}'s take on the topic \cite{ga-chisolm} - and the formulation of the \textbf{Universal Geometric Algebra} as a family of abstract algebras.
+Geometric Algebra - as the mathematical project proposed by \textit{David Hestenes} and \textit{Garret Sobczyk} in \cite{ga-origin} - is a relatively new subject: as such, there seems to be no consolidated consensus as to the precise manner in which it ought to be presented. This thesis will follow most closely the original approach in \cite{ga-origin}; nonetheless, I have taken the liberty to formulate and present some of these concepts in a slightly different manner. In particular, this applies to the choice of axioms - inspired by \textit{Eric Chisolm}'s take on the topic \cite{ga-chisolm} and our limitation to finite-dimensional inner product spaces.
 
-\textbf{Geometric Algebra} concerns itself with the construction of a collection of abstract algebras which adequately extend the arithmetic of the real numbers to higher-dimensional, coordinate-free settings, under the guidance of geometric intuition. In a \textbf{Geometric Algebra} elements are fully characterised by three (geometric) properties: \textbf{magnitude}, \textbf{direction} and \textbf{orientation}. In practice, the theory identifies linear spaces with Euclidean geometric primitives, and in doing so equips any (finite-dimensional) linear space with a powerful algebra whose elements are the subspaces themselves.
+\textbf{Geometric Algebra} concerns itself with the construction of a collection of abstract algebras which adequately extend the arithmetic of the real numbers to higher-dimensional, coordinate-free settings, under the guidance of geometric intuition. Intuitively, the theory identifies linear spaces with Euclidean geometric primitives (think points, segments, parallelograms...), and in doing so equips any (finite-dimensional) linear space with a powerful algebra whose elements are the subspaces themselves.
 
-This is reminiscent of the Greek pre-algebraic view of mathematics, whereby arithmetic was intrinsically tied to geometric constructions. 
+This is reminiscent of the Greek pre-algebraic view of mathematics, whereby arithmetic was intrinsically tied to geometric constructions.
 Perhaps for this very reason, \textbf{Geometric Algebra} has had made significant progress in its express goal of providing a unified framework for mathematical physics and applied mathematics. In his book, \textit{Hestenes} details this more specifically (p. ix)\cite{ga-origin}:
 
 \begin{quote}
