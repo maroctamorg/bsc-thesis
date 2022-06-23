@@ -1,13 +1,13 @@
 \begin{axiom}\label{a:ga-axiom1}
-    $\G$ contains $\R$ as a subalgebra and $\V$ as a subspace; these generate the entire algebra. We call elements of $\R$ scalars, and elements of $\V$ vectors.
+	$\G$ contains $\R$ as a subalgebra and $\V$ as a subspace; these sets are \emph{disjoint} and \emph{generate} the entire algebra: that is to say, all elements of the algebra are obtained by multiplying and adding elements from the two sets. We call elements of $\R$ \emph{scalars}, and elements of $\V$ \emph{vectors}.
 \end{axiom}
 
 \begin{axiom}\label{a:ga-axiom2}
-	The formal product of a scalar and a vector corresponds with the multiplication by a scalar of the vector space.
+	The formal product of a scalar and a vector corresponds with the \emph{multiplication by a scalar of the vector space}.
 \end{axiom}
 
 \begin{axiom}\label{a:ga-axiom3}
-    The square of a vector corresponds to its inner product with itself.
+    The square of a vector corresponds to its inner product with itself; we denote the inner product on $\V$ as $u|v$.
 	\[\forall v \neq 0 \in \V \quad v^2 \equiv vv = v|v = |v|^2\]
 \end{axiom}
 
@@ -19,6 +19,10 @@
 \begin{remark}\label{r:ga-axiom3}
 	The above axiom distinguishes a Clifford Algebra from a Geometric Algebra in our treatment: a Clifford Algebra only requires a quadratic form on a vector space $\V$. Standard treatments of Geometric Algebra also do not make such a strict requirement and thus the terms are often used interchangeably: we will not be doing so in this thesis.
 \end{remark}
+
+\begin{axiom}\label{a:freest}
+	The product of orthogonal vectors is a formal product subject only to bilinearity and antisymmetry; products over distinct subsets of a given orthonormal basis are linearly independent and together with the unit scalar form a vector space-basis for the algebra.
+\end{axiom}
 
 %\begin{axiom}\label{a:ga-axiom5}
 %%	The antisymmetrized product of linearly independent vectors	produces an element which does not belong to $\R \bigoplus \V$, we call this product the \textbf{exterior product} and denote it $u \wedge v = \frac{1}{2} (uv - vu)$. 

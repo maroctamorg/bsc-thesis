@@ -1,43 +1,47 @@
-\section{The Geometric Family of Algebras}\label{s:uga}
-
-In the standard formalism, the fundamental concept in Geometric Algebra is that of the \textbf{Universal Geometric Algebra} (UGA for short): an infinite-dimensional abstract algebra obeying a certain set of axioms, within which all the Geometric Algebras are contained (as subalgebras) \cite{ga-origin}. 
-
-For our purposes, whereby we will limit ourselves to geometric algebras over finite-dimensional inner product spaces, I have found this to be unnecessary and not the best suited approach. Instead we shall formulate as our starting point, a family of geometric algebras:
-\begin{definition}[Geometric Family of Algebras]
-	The \textbf{Geometric Family of Algebras} is a family of algebras obeying a specific set of axioms. Its elements (the Geometric Algebras) are specified by the choice of a finite-dimensional inner product space over the real numbers.
-\end{definition}
-
-A \textbf{GFA} is then a template for Geometric Algebras: given a finite-dimensional linear space, and an inner product, there exists a unique axiom-abiding algebra which contains the linear space and whose symmetrized product corresponds to the prescribed inner product.
-
-We will, however, discuss the generally applicable definitions and results in the context of an abstract algebra whose formal product obeys the axioms, and whose abstract linear space will always be assumed to be of a sufficiently high (finite) dimension such that it does not get in the way of the argument.
-
+%\section{The Geometric Family of Algebras}\label{s:uga}
+%
+%In the standard formalism, the fundamental concept in Geometric Algebra is that of the \textbf{Universal Geometric Algebra} (UGA for short): an infinite-dimensional abstract algebra obeying a certain set of axioms, within which all the Geometric Algebras are contained (as subalgebras) \cite{ga-origin}. 
+%
+%For our purposes, whereby we will limit ourselves to geometric algebras over finite-dimensional inner product spaces, I have found this to be unnecessary and not the best suited approach. Instead we shall formulate as our starting point, a family of geometric algebras:
+%\begin{definition}[Geometric Family of Algebras]
+%	The \textbf{Geometric Family of Algebras} is a family of algebras obeying a specific set of axioms. Its elements (the Geometric Algebras) are specified by the choice of a finite-dimensional inner product space over the real numbers.
+%\end{definition}
+%
+%A \textbf{GFA} is then a template for Geometric Algebras: given a finite-dimensional linear space, and an inner product, there exists a unique axiom-abiding algebra which contains the linear space and whose symmetrized product corresponds to the prescribed inner product.
+%
+%We will, however, discuss the generally applicable definitions and results in the context of an abstract algebra whose formal product obeys the axioms, and whose abstract linear space will always be assumed to be of a sufficiently high (finite) dimension such that it does not get in the way of the argument.
+%
 %\newpage
 
 \section{Axioms and Definitions}\label{s:axioms-definitions}
 
-The Geometric Algebra $\G$ of a finite-dimensional inner product space $\V$ is the 'freest' (i.e. the most general) unitary associative algebra over the reals obeying the following axioms:
+The Geometric Algebra $\G$ of a finite-dimensional inner product space $\V$ is the unital associative algebra over the reals which obeys the following axioms:
 \input{src/definitions/ga-axioms}
 We refer to the product of such an algebra as a \textbf{geometric product}.
 
-\begin{remark}
-	That the algebra is the 'freest' simply means that we specify the product just enough that it satisfies the axioms, and impose no further relations. One could for example define a geometric product on $\R^3$ as the sum of the inner and cross products: the generated algebra would satisfy the axioms, however it would not be the freest since the cross product imposes the additional equivalence relation:
-	\[e_ie_{[i+1]_3} \equiv e_{[i+2]_3} \quad \forall i \in \{1,2,3\}\]
-	where $[a]_3$ is a shorthand notation for $a$ mod $3$.
-	A modern, abstract formulation of the concept has this property naturally since the Geometric Algebra is constructed from more abstract objects by imposing only the required relations: I have not taken this route given the scope and target audience of the thesis. %\textcolor{red}{FETCH A REFERENCE?!}
-\end{remark}
+%\begin{remark}
+%	That the algebra is the 'freest' simply means that we specify the product just enough that it satisfies the axioms, and impose no further relations. One could for example define a geometric product on $\R^3$ as the sum of the inner and cross products: the generated algebra would satisfy the axioms, however it would not be the freest since the cross product imposes the additional equivalence relation:
+%	\[e_ie_{[i+1]_3} \equiv e_{[i+2]_3} \quad \forall i \in \{1,2,3\}\]
+%	where $[a]_3$ is a shorthand notation for $a$ mod $3$.
+%	A modern, abstract formulation of the concept has this property naturally since the Geometric Algebra is constructed from more abstract objects by imposing only the required relations: I have not taken this route given the scope and target audience of the thesis. %\textcolor{red}{FETCH A REFERENCE?!}
+%\end{remark}
 
-Two results follow immediately from Axiom \ref{a:ga-axiom3}:
+It follows immediately from Axiom \ref{a:ga-axiom3}:
 \input{src/lemmas/invertibility}
 
-\input{src/lemmas/inner-product}
-\input{src/proofs/inner-product}
+%\input{src/lemmas/inner-product}
+%\input{src/proofs/inner-product}
 
 %We have seen that $\R \bigoplus \V$ is closed under the symmetric part of the product; the algebra must thus be generated by the antisymmetric part of the product:
 %\input{src/definitions/exterior-product}
 
-We have observed that the axioms place a restriction on the symmetric part of the product between two vectors. The antisymmetric part, on the other hand, bears no restriction: since the Geometric Algebra is the most general algebra obeying the axioms, we identify this part of the product with a formal bilinear and antisymmetric product, we call it the \textbf{exterior} product. We thus obtain the principal property of the geometric product.
-\input{src/theorems/geometric-product}
-\input{src/proofs/geometric-product}
+%We have observed that the axioms place a restriction on the symmetric part of the product between two vectors. The antisymmetric part, on the other hand, we denote $u \wedge v$ and call it the exterior product. This product is specified by Axiom \ref{a:freest}, as presented in the following lemma:
+%\input{src/lemmas/outer-product}
+%\input{src/proofs/outer-product}
+%bears no restriction: since the Geometric Algebra is the most general algebra obeying the axioms, we identify this part of the product with a formal bilinear and antisymmetric product, we call it the \textbf{exterior} product.
+One of the main results of this section is the principal property of the geometric product.
+\input{src/theorems/geometric-product2}
+\input{src/proofs/geometric-product2}
 
 As a corollary, we obtain the following self-evident propositions.
 %\input{src/corollaries/l-independence}
