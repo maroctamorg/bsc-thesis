@@ -1,0 +1,20 @@
+\begin{proof}
+	First, we prove that for a given orthogonal basis, the grade of a blade is unique, then we show that the grade of a blade is independent of the choice of basis. The result extends directly to general multivectors.
+
+	By Lemma \ref{t:frame}, a blade is simply an element of some frame of $\G$: since a frame is a linear basis for the Geometric Algebra, it follows that frame elements of different grade are linearly independent. The grade is thus unique w.r.t. to a specific choice of frame.
+
+	Let $E \equiv \{e_i\}_{i=1}^n$ and $W \equiv \{w_j\}_{j=1}^n$ be two orthonormal bases for the geometric algebra; we proceed by induction on the hypothesis that any $k$-blade in $W$ is of grade $k$ in $E$.
+
+	For $k=1$ the statement is trivial: a vector is a vector in any basis.
+
+	Assume the statement is true for $k=m-1$ and recall Lemma \ref{l:grade-k-2}, we thus have:
+	\begin{align*}
+		w_{i_1}...w_{i_m} &= (\sum_{i: \{1..m-1\} \to \{1..n\}} \alpha_i e_{i_1}...e_{i_{m-1}})w_{i_m} \\
+						  &= \gr{w_{i_1}...w_{i_m}}{m-2} + \gr{w_{i-1}...w_{i_m}}{m} \\
+						  &= \gr{w_{i-1}...w_{i_m}}{m}
+	\end{align*}
+	where in the second step, we have simply separated the sum into terms of grade $m-2$ and $m$.
+
+	That the product is non-zero simply follows from the fact that the algebra would otherwise permit a frame of dimension smaller than $2^n$.
+
+\end{proof}

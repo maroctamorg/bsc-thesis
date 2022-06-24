@@ -1,0 +1,17 @@
+\begin{proof}
+	If $(A, i)$ and $(B, j)$ are two Geometric Algebras of $(\V, \cdot|\cdot)$, then by Axiom \ref{a:universal} there exist algebra homomorphisms:
+	\begin{align*}
+		&f: A \to B \text{ s. that } f \odot i = j \\
+		&g: B \to A \text{ s. that } g \odot j = i
+	\end{align*}
+
+	It follows that the compositions obey:
+	\begin{alignat*}{2}
+		&g \odot f&&: A \to A \text{ s. that } i = (g \odot f) \odot i \\
+		& &&\Rightarrow g \odot f = id_A : A \to A \\
+		&f \odot g&&: B \to B \text{ s. that } j = (f \odot g) \odot j \\
+		& &&\Rightarrow f \odot g = id_B : B \to B
+	\end{alignat*}
+
+	We conclude that $g = f^{-1}$ and thus the homomorphisms are 1-to-1 so that the Geometric Algebras are isomorphic.
+\end{proof}

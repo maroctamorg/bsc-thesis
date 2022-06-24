@@ -1,0 +1,22 @@
+\begin{proof}
+	Let $\{e_j\}_{j=1}^n$ be an orthonormal basis, and
+	\[w_i = \sum_{j=1}^n A_{ij} e_j\]
+
+	The orthogonality of $\{w_i\}_{i=1}^k$ implies that for $a \neq b$:
+	\begin{align*}
+		w_a|w_b &= (\sum_{j=1}^n A_{aj} e_j)|(\sum_{r=1}^n A_{br} e_r) \\
+				&= \sum_{j=1}^n A_{aj}A_{bj} = 0
+	\end{align*}
+
+	Now expanding the full product, we have:
+	\[w_1...w_k = (\sum_{j_1=1}^n A_{1{j_1}})...(\sum_{j_k=1}^n A_{k{j_k}})\]
+
+	We can index the terms in the above product as follows: at each of the $k$ factors choose one of the terms in the sum (i.e. $A_{it} e_t$), construct a sequence $t(i)$ out of subsequent choices.
+
+	The grade $k-2$ terms (w.r.t. the orthonormal basis) are those terms for which only one choice is repeated; say that the repetition occurs at factors $q$ and $m$ with value $c = t(q) = t(m)$. We can also see this in the other direction, that is to say: given a choice of $q$ and $m$ where the repetition ought to occur, we are free to choose any $c \in \{1..n\}: t(q) = t(m) = c$.
+
+	Thus, we may collect all terms of grade $k-2$ in the following sum:
+	\begin{align*}
+		\sum_{(q,m) \in \{1..k\}^2} \sum_{c=1}^n (A_{1t(1)}...A_{qc}A_{mc}...A_{kt(k)})e_{t(1)}...\cap{e_{t(q)}}\cap{e_{t(m)}}
+	\end{align*}
+\end{proof}
