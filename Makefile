@@ -10,11 +10,14 @@ compile:
 	mv build/thesis.pdf ./ 
 
 verbose:
-	${CC} ${CARGS} ${CTARGET} ${CSOURCE}
-	mv build/thesis.pdf ./ 
+	${CC} ${CARGS} ${CTARGET}/thesis/thesis ${CSOURCE}
+	mv build/thesis/thesis.pdf ./ 
 
 present:
 	${PDFVIEWER} thesis.pdf
+
+present_abstract:
+	${PDFVIEWER} abstract.pdf
 
 cleanup:
 	rm build/*
