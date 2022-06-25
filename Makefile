@@ -16,9 +16,6 @@ verbose:
 present:
 	${PDFVIEWER} thesis.pdf
 
-present_abstract:
-	${PDFVIEWER} abstract.pdf
-
 cleanup:
 	rm build/*
 
