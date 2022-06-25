@@ -48,7 +48,7 @@ A generalized proof of existence and dimensionality is outside the scope of this
 
 We are now equipped to prove some basic properties about the Geometric Algebra.
 
-Two results follow immediately from Axiom \ref{a:ga-axiom3}:
+Two results follow immediately from Axiom \ref{a:square}:
 \input{src/lemmas/invertibility}
 
 \input{src/lemmas/inner-product}
@@ -82,14 +82,18 @@ Before we move on to consider more general results, we ought to familiarise ours
 
 \input{src/definitions/basis}
 \input{src/definitions/frame}
+\begin{remark}
+	It is important to note that it is a non-trivial fact of combinatorics and group theory that the sign of a permutation is well-defined. We will make implicit use of this in arguments and definitions that refer to permutation of orthogonal vectors in a product: in practice this means that we are justified in assigning a unique sign to a permutation based on counting the number of pairwise transposition of factors, and saying things such as 'distinct up to permutation'.
+\end{remark}
 \input{src/theorems/frame-basis}
+\input{src/proofs/frame-basis}
 
 We are now justified in presenting the following definitions:
 \input{src/definitions/ga-grade}
-\input{src/lemmas/grade-k-2}
-\input{src/proofs/grade-k-2}
-\input{src/lemmas/grade}
-\input{src/proofs/grade}
+%\input{src/lemmas/grade-k-2}
+%\input{src/proofs/grade-k-2}
+\input{src/lemmas/grade-definiteness}
+\input{src/proofs/grade-definiteness}
 \input{src/definitions/pseudoscalar}
 
 The distinction between basis and frame is very important: a frame is to a basis, as a geometric algebra is to its generating vector space.
