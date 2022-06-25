@@ -1,0 +1,14 @@
+\begin{proof}
+	Let $u$ and $v \in \V$, we may expand the two vectors in an orthogonal basis $\{e_i\}_{i=1}^n$ and separate their product into a symmetric and antisymmetric part using bilinearity:
+	\begin{align*}
+		uv &= \left(\sum_i \alpha_ie_i \right)\left(\sum_j \beta_je_j \right) \\
+		   &= \sum_{i} (\alpha_i\beta_i)e_ie_i + \sum_{i \neq j} (\alpha_i\beta_j)e_ie_j \\
+		   &= u|v + u\wedge v
+	\end{align*}
+	Where in the last step we have made the following observations:
+	\begin{enumerate}
+		\item since the product $e_ie_i$ corresponds to the inner product $e_i|e_i$ by Axiom \ref{a:ga-axiom3}, it follows directly that the symmetric part of the sum is the inner product of $u$ and $v$ in $\V$.
+
+		\item the antisymmetric sum is a linear combination of products of orthogonal vectors; by Axiom \ref{a:freest}, we obtain that it is indeed a bilinear antisymmetric product and identify this with the exterior product $u\wedge v$.
+	\end{enumerate}
+\end{proof}

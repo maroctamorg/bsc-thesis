@@ -1,7 +1,7 @@
 \section{Historical Background}
 Geometric Algebra has its roots in the long-running pursuit of a mathematical framework for the description of physical space. Though the concept of vectors is ancient, in this section we shall focus on the developments starting in the 19th century.
 
-In the early 1800s, \textbf{Grassmann} was the first to formulate the notions of 'modern' linear algebra (vector spaces, bases, inner product and orthogonality) \cite{grassmann}; his development of exterior (or as he called it, extended) algebra laid the key theoretical groundwork for Clifford's Geometric Algebra. (p.28-29)\cite{ga-foundations}.
+In the early 1800s, \textbf{Grassmann} was the first to formulate the notions of `modern' linear algebra (vector spaces, bases, inner product and orthogonality) \cite{grassmann}; his development of exterior (or as he called it, extended) algebra laid the key theoretical groundwork for Clifford's Geometric Algebra. \cite[p.28-29]{ga-foundations}.
 %\begin{align*}
 %	\bv{e_i} | \bv{e_j} &= \delta_{ij}\\
 %	\bv{e_i}\wedge \bv{e_j} &= -\bv{e_i}\wedge \bv{e_j}\\
@@ -25,7 +25,7 @@ The development of standard vector calculus (e.g. $\nabla, \nabla \cdot, \nabla 
 
 Though it became the adopted formalism, \textbf{Gibbs}' vector algebra has its own deficiencies: it requires two separate vectors product, lacks a division operation and its cross product does not generalize to higher-dimensions.
 
-\textbf{Clifford}'s  Geometric Algebra - introduced in the second half of the 19th century - aimed to supersede both formalisms by providing an algebra that could be generalized to higher dimensions, and adequately and comprehensively describe both vectors and transformations in space; it extends Grassmann's work, incorporating Hamilton's quaternions into an abstractable and generalizable algebraic system for vectors, based on the geometric product.
+\textbf{Clifford}'s  Geometric Algebra - introduced in the second half of the 19th century - aimed to supersede both formalisms by providing an algebra that could be generalized to higher dimensions, and adequately and comprehensively describe both vectors and transformations in space; it extends Grassmann's work, incorporating Hamilton's quaternions into a generalizable algebraic system for vectors, based on the geometric product.
 %\begin{align*}
 %    &uv = u | v + u \wedge v\\
 %    &V = \sum \langle V\rangle_i\\
@@ -40,7 +40,7 @@ Though \textbf{Clifford}'s work was mostly neglected in his time, it finds moder
 
 Our main focus in this paper, will be in the axiomatic approach to Geometric Algebra: we will be proving basic properties and theorems from the axioms and use these towards constructing the Euclidean Geometric Algebras and their Even Subalgebras in 1, 2 and 3 dimensions, demonstrating that the latter are actually isomorphic to the Real, Complex and Quaternion algebras.
 
-In section \ref{s:axioms-definitions}, we provide an axiomatic formulation of Geometric Algebra as well as present the main objects and their definitions. The most important results in this section are Theorem \ref{t:geometric-product} which separates the geometric product of two vectors into an inner and an outer product and Lemma \ref{l:ga-expansion} which affirms that every multivector has a unique decomposition in terms of more basic objects called $k$-blades. We also make some remarks about the construction of a Geometric Algebra for a given Inner Product Space.
+In section \ref{s:axioms-definitions}, we provide an axiomatic formulation of Geometric Algebra as well as present the main objects and their definitions. The most important results in this section are Theorem \ref{t:geometric-product} which separates the geometric product of two vectors into an inner and an outer product and Theorem \ref{t:frame} which affirms that every multivector has a unique decomposition in terms of more basic objects called $k$-blades. We also make some remarks about the construction of a Geometric Algebra for a given Inner Product Space.
 
 Section \ref{s:products} contains a few definitions and a minor lemma leading up to Theorem \ref{t:homog-product} which characterises the geometric product between homogeneous multivectors from which we obtain the main result of Chapter \ref{ch:ga} in the form of Corollary \ref{c:even-subalgebras} which states that the set of even-graded elements constitutes a subalgebra.
 
@@ -49,12 +49,12 @@ In Chapter \ref{ch:euclidean-even}, we construct the Geometric Algebras of the 1
 %\newpage
 
 \section{Geometric Algebra as a Project}
-Geometric Algebra - as the mathematical project proposed by \textit{David Hestenes} and \textit{Garret Sobczyk} in \cite{ga-origin} - is a relatively new subject: as such, there seems to be no consolidated consensus as to the precise manner in which it ought to be presented. This thesis will follow most closely the original approach in \cite{ga-origin}; nonetheless, I have taken the liberty to formulate and present some of these concepts in a slightly different manner. In particular, this applies to the choice of axioms - inspired by \textit{Eric Chisolm}'s take on the topic \cite{ga-chisolm} and our limitation to finite-dimensional inner product spaces.
+Geometric Algebra - as the mathematical project proposed by \textit{David Hestenes} and \textit{Garret Sobczyk} in \cite{ga-origin} - is a relatively new subject: as such, there seems to be no consolidated consensus as to the precise manner in which it ought to be presented. This thesis will diverge from the approach in \cite{ga-origin} in a few important ways; in particular, this applies to the choice of axioms - closer to Vaz and da Rocha's take on the topic \cite{clifford-algebra} and our limitation to finite-dimensional inner product spaces.
 
 \textbf{Geometric Algebra} concerns itself with the construction of a collection of abstract algebras which adequately extend the arithmetic of the real numbers to higher-dimensional, coordinate-free settings, under the guidance of geometric intuition. Intuitively, the theory identifies linear spaces with Euclidean geometric primitives (think points, segments, parallelograms...), and in doing so equips any (finite-dimensional) linear space with a powerful algebra whose elements are the subspaces themselves.
 
 This is reminiscent of the Greek pre-algebraic view of mathematics, whereby arithmetic was intrinsically tied to geometric constructions.
-Perhaps for this very reason, \textbf{Geometric Algebra} has had made significant progress in its express goal of providing a unified framework for mathematical physics and applied mathematics. In his book, \textit{Hestenes} details this more specifically (p. ix)\cite{ga-origin}:
+Perhaps for this very reason, \textbf{Geometric Algebra} has had made significant progress in its express goal of providing a unified framework for mathematical physics and applied mathematics. In his book, \textit{Hestenes} details this more specifically \cite[p. ix]{ga-origin}:
 
 \begin{quote}
 	``Our long-range aim is to see Geometric Calculus established as a unified system for handling linear and multilinear algebra, multivariable calculus, complex variable theory, differential geometry and other subjects with geometric content.''

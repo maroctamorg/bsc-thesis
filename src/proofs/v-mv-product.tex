@@ -8,18 +8,18 @@
 	Repeated application of the above allows us to permute indices in a product, as follows:
 	\begin{align*}
 		aA_r = aa_1a_2 \ldots a_r = &2a|a_1a_2 \ldots a_r - a_1aa_2 \ldots a_r \\
-		= &2a|a_1a_2 \ldots a_r - 2a|a_2a_1 \ldots a_r + a_1aa_2 \ldots a_r \\
+		= &2a|a_1a_2 \ldots a_r - 2a|a_2a_1 \ldots a_r + a_1a_2aa_3 \ldots a_r \\
 		= &\ldots \\
 		= &2 \sum_{k=1}^r (-1)^{k+1}a|a_k a_1 \ldots \check{a_k} \ldots a_r + (-1)^ra_1a_2 \ldots a_ra \\
 		= &\sum_{k=1}^r (-1)^{k+1}a|a_k a_1 \ldots \check{a_k} \ldots a_r + \sum_{k=1}^r (-1)^{k+1}a|a_k a_1 \ldots \check{a_k} \ldots a_r \\
 		&+ (-1)^ra_1a_2 \ldots a_ra
 	\end{align*}
 
-	Notice that the first term above has grade $r-1$: we will demonstrate that this is indeed the lowest grade term. For now, we preemptively denote it $a | A_r$.
+	Notice that the first term above (denote it $T_1$ for convenience) has grade $r-1$: we will prove that this is indeed the lowest grade term by showing that $aA_r - T_1$ has grade $r+1$.
 	
 	Let us rewrite the sum using invertibility of vectors (th. \ref{l:invertibility}):
 	\begin{align*}
-		a | A_r &= \sum_{k=1}^r (-1)^{k+1}a|a_k a_1 \ldots \check{a_k} \ldots a_r\\
+		T_1 &= \sum_{k=1}^r (-1)^{k+1}a|a_k a_1 \ldots \check{a_k} \ldots a_r\\
 				&= \sum_{k=1}^r (-1)^{k+1}a|a_k a_k^{-1}a_k a_1 \ldots \check{a_k} \ldots a_r\\
 				&= \sum_{k=1}^r a|a_k a_k^{-1} A_r 
 	\end{align*}
@@ -27,7 +27,10 @@
 	Substracting the above from $aA_r$ and factoring:
 	\[aA_r - a | A_r = (a - \sum_{k=1}^r a|a_k a_k^{-1})A_r \equiv bA_r\]
 	
-	Since by construction, $b | a_k = 0 \forall k \in \{1, \ldots r\}$, it follows by Corollary \ref{c:orthogonality} that the above is a product of $r+1$ anticommuting vectors and thus has grade $r+1$ by Definition \ref{d:k-blades}. We are justified in writing:
+	Since $a_k^{-1} = \mg{a_k}^{-2}a_k$ (Lemma \ref{l:invertibility}), we have by construction that
+	\[b | a_k = (a - \sum_{k=1}^r (a|a_k) \mg{a_k}^{-2}a_k)|a_k = a|a_k - a|a_k  = 0 \]
+
+	It follows by Corollary \ref{c:orthogonality} that $bA_r$ is a product of $r+1$ orthogonal vectors and thus has grade $r+1$ by Definition \ref{d:grade}. We are justified in writing:
 
 	\begin{align*}
 		aA_r &= a | A_r + a \wedge A_r \\
@@ -41,3 +44,5 @@
 		aA_r &= 2a \wedge A_r - (-1)^rA_ra \Rightarrow a \wedge A_r = \frac{1}{2} (aA_r + (-1)^rA_ra)
 	\end{align*}
 \end{proof}
+
+The above proof is due to \textit{Hestenes} \cite[p. 8-10]{ga-origin}

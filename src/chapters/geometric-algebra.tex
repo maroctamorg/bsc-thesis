@@ -1,41 +1,69 @@
-\section{The Geometric Family of Algebras}\label{s:uga}
-
-In the standard formalism, the fundamental concept in Geometric Algebra is that of the \textbf{Universal Geometric Algebra} (UGA for short): an infinite-dimensional abstract algebra obeying a certain set of axioms, within which all the Geometric Algebras are contained (as subalgebras) \cite{ga-origin}. 
-
-For our purposes, whereby we will limit ourselves to geometric algebras over finite-dimensional inner product spaces, I have found this to be unnecessary and not the best suited approach. Instead we shall formulate as our starting point, a family of geometric algebras:
-\begin{definition}[Geometric Family of Algebras]
-	The \textbf{Geometric Family of Algebras} is a family of algebras obeying a specific set of axioms. Its elements (the Geometric Algebras) are specified by the choice of a finite-dimensional inner product space over the real numbers.
-\end{definition}
-
-A \textbf{GFA} is then a template for Geometric Algebras: given a finite-dimensional linear space, and an inner product, there exists a unique axiom-abiding algebra which contains the linear space and whose symmetrized product corresponds to the prescribed inner product.
-
-We will, however, discuss the generally applicable definitions and results in the context of an abstract algebra whose formal product obeys the axioms, and whose abstract linear space will always be assumed to be of a sufficiently high (finite) dimension such that it does not get in the way of the argument.
-
+%\section{The Geometric Family of Algebras}\label{s:uga}
+%
+%In the standard formalism, the fundamental concept in Geometric Algebra is that of the \textbf{Universal Geometric Algebra} (UGA for short): an infinite-dimensional abstract algebra obeying a certain set of axioms, within which all the Geometric Algebras are contained (as subalgebras) \cite{ga-origin}. 
+%
+%For our purposes, whereby we will limit ourselves to geometric algebras over finite-dimensional inner product spaces, I have found this to be unnecessary and not the best suited approach. Instead we shall formulate as our starting point, a family of geometric algebras:
+%\begin{definition}[Geometric Family of Algebras]
+%	The \textbf{Geometric Family of Algebras} is a family of algebras obeying a specific set of axioms. Its elements (the Geometric Algebras) are specified by the choice of a finite-dimensional inner product space over the real numbers.
+%\end{definition}
+%
+%A \textbf{GFA} is then a template for Geometric Algebras: given a finite-dimensional linear space, and an inner product, there exists a unique axiom-abiding algebra which contains the linear space and whose symmetrized product corresponds to the prescribed inner product.
+%
+%We will, however, discuss the generally applicable definitions and results in the context of an abstract algebra whose formal product obeys the axioms, and whose abstract linear space will always be assumed to be of a sufficiently high (finite) dimension such that it does not get in the way of the argument.
+%
 %\newpage
 
 \section{Axioms and Definitions}\label{s:axioms-definitions}
 
-The Geometric Algebra $\G$ of a finite-dimensional inner product space $\V$ is the 'freest' (i.e. the most general) unitary associative algebra over the reals obeying the following axioms:
-\input{src/definitions/ga-axioms}
-We refer to the product of such an algebra as a \textbf{geometric product}.
+%The Geometric Algebra $\G$ of a finite-dimensional inner product space $\V$ is the unital associative algebra over the reals which obeys the following axioms:
+%\input{src/definitions/ga-axioms}
+%We refer to the product of such an algebra as a \textbf{geometric product}.
+
+%\begin{remark}
+%	That the algebra is the 'freest' simply means that we specify the product just enough that it satisfies the axioms, and impose no further relations. One could for example define a geometric product on $\R^3$ as the sum of the inner and cross products: the generated algebra would satisfy the axioms, however it would not be the freest since the cross product imposes the additional equivalence relation:
+%	\[e_ie_{[i+1]_3} \equiv e_{[i+2]_3} \quad \forall i \in \{1,2,3\}\]
+%	where $[a]_3$ is a shorthand notation for $a$ mod $3$.
+%	A modern, abstract formulation of the concept has this property naturally since the Geometric Algebra is constructed from more abstract objects by imposing only the required relations: I have not taken this route given the scope and target audience of the thesis. %\textcolor{red}{FETCH A REFERENCE?!}
+%\end{remark}
+
+Let $(\V, \cdot|\cdot )$ be a real finite-dimensional inner product space, $\G$ be a unital associative algebra over $\R$ and $l: \V \to A$ be a linear map.
+
+\input{src/definitions/geometric-algebra}
+
+Before anything else, we present a few theorems and remarks regarding existence and universality.
+\input{src/theorems/uniqueness}
+\input{src/proofs/uniqueness}
+
+\input{src/theorems/existence}
+A generalized proof of existence and dimensionality is outside the scope of this thesis; later on, we will construct the Geometric Algebras of 1, 2 and 3-dimensional Euclidean Spaces explicitly and that will be sufficient for our discussion. For the interested reader, you may refer to a general proof by construction in \cite[Section 3.2]{clifford-algebra}
 
 \begin{remark}
-	That the algebra is the 'freest' simply means that we specify the product just enough that it satisfies the axioms, and impose no further relations. One could for example define a geometric product on $\R^3$ as the sum of the inner and cross products: the generated algebra would satisfy the axioms, however it would not be the freest since the cross product imposes the additional equivalence relation:
-	\[e_ie_{[i+1]_3} \equiv e_{[i+2]_3} \quad \forall i \in \{1,2,3\}\]
-	where $[a]_3$ is a shorthand notation for $a$ mod $3$.
-	A modern, abstract formulation of the concept has this property naturally since the Geometric Algebra is constructed from more abstract objects by imposing only the required relations: I have not taken this route given the scope and target audience of the thesis. %\textcolor{red}{FETCH A REFERENCE?!}
+	From now on, we will make the identifications
+	\begin{align*}
+		&l(v) \equiv v \ \forall v \in \V \\
+		&\alpha 1_A \equiv \alpha \ \forall \alpha \in \R
+	\end{align*}
+	This is justified due to the linearity of the mapping $l: \V \to A$, and the bilinearity of the product of an algebra, which implies that $\alpha 1_A \cdot \beta 1_A  + \gamma 1_A = (\alpha \beta + \gamma) 1_A$.
 \end{remark}
 
-Two results follow immediately from Axiom \ref{a:ga-axiom3}:
+We are now equipped to prove some basic properties about the Geometric Algebra.
+
+Two results follow immediately from Axiom \ref{a:square}:
 \input{src/lemmas/invertibility}
 
 \input{src/lemmas/inner-product}
 \input{src/proofs/inner-product}
 
-%We have seen that $\R \bigoplus \V$ is closed under the symmetric part of the product; the algebra must thus be generated by the antisymmetric part of the product:
+\begin{remark}
+	We have seen that $\R \bigcup \V \subset \G$ is closed under the symmetric part of the product; the algebra must thus be generated by the antisymmetric part of the product: we denote this bilinear antisymmetric product $u \wedge v$ and call it the \textbf{exterior product}.
+\end{remark}
 %\input{src/definitions/exterior-product}
+%We have observed that the axioms place a restriction on the symmetric part of the product between two vectors. The antisymmetric part, on the other hand, we denote $u \wedge v$ and call it the exterior product. This product is specified by Axiom \ref{a:freest}, as presented in the following lemma:
+%\input{src/lemmas/outer-product}
+%\input{src/proofs/outer-product}
+%bears no restriction: since the Geometric Algebra is the most general algebra obeying the axioms, we identify this part of the product with a formal bilinear and antisymmetric product, we call it the \textbf{exterior} product.
 
-We have observed that the axioms place a restriction on the symmetric part of the product between two vectors. The antisymmetric part, on the other hand, bears no restriction: since the Geometric Algebra is the most general algebra obeying the axioms, we identify this part of the product with a formal bilinear and antisymmetric product, we call it the \textbf{exterior} product. We thus obtain the principal property of the geometric product.
+One of the main results of this section is the principal property of the geometric product.
 \input{src/theorems/geometric-product}
 \input{src/proofs/geometric-product}
 
@@ -45,25 +73,33 @@ As a corollary, we obtain the following self-evident propositions.
 \input{src/corollaries/orthogonality}
 \input{src/corollaries/orthonormal-bases}
 
-Before we make some final remarks about existence, uniqueness and construction, we ought to familiarise ourselves with some specific terminology.
+Before we move on to consider more general results, we ought to familiarise ourselves with some specific terminology.
 \input{src/definitions/ga-elements}
 
-A critical lemma to which we will often make implicit reference is the following:
-\input{src/lemmas/ga-expansion}
-\input{src/proofs/ga-expansion}
+%A critical lemma to which we will often make implicit reference is the following:
+%\input{src/lemmas/ga-expansion}
+%\input{src/proofs/ga-expansion}
 
-We are now justified in presenting the following definitions:
-\input{src/definitions/ga-grade.tex}
 \input{src/definitions/basis}
 \input{src/definitions/frame}
+\begin{remark}
+	It is important to note that it is a non-trivial fact of combinatorics and group theory that the sign of a permutation is well-defined. We will make implicit use of this in arguments and definitions that refer to permutation of orthogonal vectors in a product: in practice this means that we are justified in assigning a unique sign to a permutation based on counting the number of pairwise transposition of factors, and saying things such as 'distinct up to permutation'.
+\end{remark}
+\input{src/theorems/frame-basis}
+\input{src/proofs/frame-basis}
+
+We are now justified in presenting the following definitions:
+\input{src/definitions/ga-grade}
+%\input{src/lemmas/grade-k-2}
+%\input{src/proofs/grade-k-2}
+\input{src/lemmas/grade-definiteness}
+\input{src/proofs/grade-definiteness}
 \input{src/definitions/pseudoscalar}
 
 The distinction between basis and frame is very important: a frame is to a basis, as a geometric algebra is to its generating vector space.
 For finite-dimensional spaces, we can always produce an orthonormal basis by the Gram-Schmidt process, so we will henceforth assume all bases to be orthonormal unless otherwise specified.
 
-A frame can be identified one-to-one with the power set of a basis, as it is composed of all the possible combinations of the basis elements without repetition and up to permutation (we identify the unit scalar in the frame with the empty subset of the basis). It follows that the dimension of a geometric algebra $\G$ (as a vector space) is $2^{\gr{\G}}$.
-
-It is then clear that for every inner product space there exists a unique Geometric Algebra, and the recipe for its construction is quite simple:
+It is then clear that for every inner product space, we may construct its Geometric Algebra by the following recipe:
 \begin{enumerate}
 	\item construct an orthonormal basis for the inner-product space: this will be the basis of the algebra
 	\item construct the frame of the algebra by taking products of basis vectors
@@ -95,19 +131,14 @@ We now prove the following lemma regarding the product of a vector with a homoge
 \input{src/lemmas/v-mv-product}
 \input{src/proofs/v-mv-product}
 
-The above proof is due to \textit{Hestenes} (p. 8-10)\cite{ga-origin}
-
 Using the above lemma, we can prove the following important property of the geometric product between homogeneous multivectors.
 \input{src/theorems/homogeneous-product}
 \input{src/proofs/homogeneous-product}
 
-The above proof is due to \textit{Chisolm} (p. 20-21)\cite{ga-chisolm}
-
 As a corollary, we obtain our sought-after result.
 \input{src/corollaries/even-subalgebra}
 
-
-Moreover, we are now equipped to provide general, explicit definitions for the inner and outer products in the case of arbitrary multivectors.
-\input{src/definitions/g-inner-product2}
-\input{src/definitions/g-outer-product2}
+It also follows that the inner and outer products can be naturally generalized to arbitrary multivectors as well-defined bilinear operations on $\G(\V)$.
+\input{src/corollaries/g-inner-product2}
+\input{src/corollaries/g-outer-product2}
 
