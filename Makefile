@@ -10,8 +10,8 @@ compile:
 	mv build/thesis.pdf ./ 
 
 verbose:
-	${CC} ${CARGS} ${CTARGET}/thesis/thesis ${CSOURCE}
-	mv build/thesis/thesis.pdf ./ 
+	${CC} ${CARGS} ${CTARGET} ${CSOURCE}
+	mv build/thesis.pdf ./ 
 
 present:
 	${PDFVIEWER} thesis.pdf

@@ -1,7 +1,7 @@
 \begin{proof}
-	We shall assume that $A_r$ is an $r$-blade: the case of a homogeneous multivector follows directly using distributivity of the geometric product (since an $r$-grade homogeneous multivector is a sum of $r$-blades).
+	We shall assume that $A_r$ is an $r$-blade: the case of a homogeneous multivector follows directly using distributivity of the geometric product (since a grade-$r$ homogeneous multivector is a sum of $r$-blades).
 
-	Recall the definition of the inner product between two vectors (def. \ref{d:inner-product1})
+	Recall Lemma \ref{l:inner-product} 
 	\[a | b = \frac{1}{2}(ab + ba)\]
 	We can reverse it to obtain:
 	\[ab = 2 a | b - ba\]
@@ -17,7 +17,7 @@
 
 	Notice that the first term above (denote it $T_1$ for convenience) has grade $r-1$: we will prove that this is indeed the lowest grade term by showing that $aA_r - T_1$ has grade $r+1$.
 	
-	Let us rewrite the sum using invertibility of vectors (th. \ref{l:invertibility}):
+	Let us rewrite the sum using invertibility of vectors (Lemma \ref{l:invertibility}):
 	\begin{align*}
 		T_1 &= \sum_{k=1}^r (-1)^{k+1}a|a_k a_1 \ldots \check{a_k} \ldots a_r\\
 				&= \sum_{k=1}^r (-1)^{k+1}a|a_k a_k^{-1}a_k a_1 \ldots \check{a_k} \ldots a_r\\

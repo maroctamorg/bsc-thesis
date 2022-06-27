@@ -1,15 +1,15 @@
 \begin{proof}
-	First, we prove that for a given orthogonal basis, the grade of a blade is unique, then we show that the grade of a blade is independent of the choice of basis. The result extends directly to general multivectors.
+	First, we prove that for a given orthogonal basis, the grade of a blade is unique, then we show that the grade of a blade is independent of the choice of basis. The result extends directly to homogeneous multivectors.
 
 	By Theorem \ref{t:frame}, a blade is simply an element of some frame of $\G$: since a frame is a linear basis for the Geometric Algebra, it follows that frame elements of different grade are linearly independent. The grade is thus unique w.r.t. to a specific choice of frame.
 
 
-	Let $\{e_j\}_{j=1}^n$ and \[w_i = \sum_{j=1}^n A_{ij} e_j\] be two orthonormal bases (orthogonality suffices, we choose this purely for notational convenience).
+	Let $\{e_j\}_{j=1}^n$ and \[w_i = \sum_{j=1}^n A_{ij} e_j\] be two orthogonal bases.
 	
 
 	The orthogonality of $\{w_i\}_{i=1}^k$ implies that for $a \neq b$:
 		
-	\[w_a|w_b = (\sum_{j=1}^n A_{aj} e_j)|(\sum_{r=1}^n A_{br} e_r) = \sum_{j=1}^n A_{aj}A_{bj} = 0\]
+	\[w_a|w_b = (\sum_{j=1}^n A_{aj} e_j)|(\sum_{r=1}^n A_{br} e_r) = \sum_{j=1}^n A_{aj}A_{bj}e_j^2 = 0\]
 
 	Expanding the full product, we have:
 	\[w_1...w_k = (\sum_{j_1=1}^n A_{1{j_1}}e_{j_1})...(\sum_{j_k=1}^n A_{k{j_k}}e_{j_k})\]
@@ -20,8 +20,8 @@
 
 	Thus, we may collect all lower grade terms in the following sum:
 	\begin{align*}
-		&\sum_{(q,m)} \sum_{f \in F} \sum_{c=1}^n (-1)^{\mg{m-q-1}}(A_{1f(1)}...A_{qc}A_{mc}...A_{kf(k)})e_{f(1)}...e_{f(k)} \\
-	&= \sum_{(q,m)} \sum_{f \in F} (-1)^{\mg{m-q-1}}(A_{1f(1)}...A_{kf(k)})e_{f(1)}...e_{f(k)} \sum_{c=1}^n (A_{qc}A_{mc}) = 0
+		&\sum_{(q,m)} \sum_{f \in F} \sum_{c=1}^n (-1)^{\mg{m-q-1}}e_c^2(A_{1f(1)}...A_{qc}A_{mc}...A_{kf(k)})e_{f(1)}...e_{f(k)} \\
+	&= \sum_{(q,m)} \sum_{f \in F} (-1)^{\mg{m-q-1}}(A_{1f(1)}...A_{kf(k)})e_{f(1)}...e_{f(k)} \left(\sum_{c=1}^n A_{qc}A_{mc}e_c^2 \right) = 0
 	\end{align*}
 	
 	So all lower-grade terms vanish. That the total product is non-zero simply follows from the fact that the algebra would otherwise permit a frame of dimension smaller than $2^n$.
